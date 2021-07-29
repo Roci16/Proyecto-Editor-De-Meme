@@ -7,10 +7,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Proyecto Editor de memes </title>
+    <script src="https://kit.fontawesome.com/55efe9bfd6.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+    <nav>
+        <h1>Generador de memes</h1>
+        <div><button><i class="far fa-file-image"></i>Imagen</button></div>
+        <div> <button><img src="https://img.icons8.com/ios/15/000000/a.png"/>Texto</button></div>
+        <div><button><i class="far fa-lightbulb"></i>Modo oscuro</button></div>
+
+        <main>
+            <section>
+                <div>
+                    <p>TOP TEXT</p>
+                    <div><img src=""></img>
+                    </div>
+                    <p>BOTTOM TEXT</p>
+                </div>
+                <div class="descargar-boton"><button><i class="fas fa-download"></i>Descargar meme</button></div>
+            </section>
+            <section>
+                <h2>Imagen</h2>
+                <form>
+                    <label>
+                        URL
+                       <input type="text"> 
+                    </label>
+                    <label>
+                        FONDO
+                        <input type="color">
+                    </label>
+                    <label>
+                        <select name="fondo">
+                        <option>Ninguno</option>
+                        <option>Aclarar</option>
+                        <option>Oscurecer</option>
+                        <option>Diferencia</option>
+                        <option>Luminosidad</option>
+                        <option>Multiplicar</option>
+                    </label>
+                    </select>
+                    FILTROS
+                    <input type="range">
+                    <label><input type="range">Brillo</label>
+                    <label><input type="range">Opacidad</label>
+                    <label><input type="range">Contraste</label>
+                    <label><input type="range">Desenfoque</label>
+                    <label><input type="range">Escala de grises</label>
+                    <label><input type="range">Sepia</label>
+                    <label><input type="range">HUE</label>
+                    <label><input type="range">Saturado</label>
+                    <label><input type="range">Negativo</label>
+                </form>
+                <div><button>Restablecer Filtros</button></div>
+            </section>
+            <section>
+                <h2>TEXTO</h2>
+                <form>
+                    SUPERIOR
+                    <textarea rows="2" cols="14"></textarea>
+                    <input type="checkbox" value="">Sin texto superior INFERIOR
+                    <textarea rows="2" cols="14"></textarea>
+                    <input type="checkbox" value="">Sin texto inferior FUENTE
+                    <select name="tipo-letra">
+                    <option>Arial</option>
+                    <option>Arial Black</option>
+                    <option>American Type writter</option>
+                    <option>Andale Mono</option>
+                    <option>Comic Sans MS</option>
+                    <option>Helvetica</option>
+                    <option>Impact</option>
+                    <option>Verdana</option>
+                    <option>Times New Roman</option>
+                   </select>
+
+                    <input type="number" name="55">
+                    <button><i class="fas fa-align-center"></i></button>
+                    <button><i class="fas fa-align-right"></i></button>
+                    <button><i class="fas fa-align-left"></i></button> COLOR
+                    <input type="color"> FONDO
+                    <input type="color">
+                    <input type="checkbox" value=""> Fondo Trasparente CONTORNO
+                    <button>Ninguno</button>
+                    <button>Claro</button>
+                    <button>Oscuro</button> ESPACIADO
+                    <input type="number"> INTERLINEADO
+                    <input type="number">
+
+
+
+
+
+
+
+                </form>
+
+
+            </section>
+
+
+        </main>
+
+
+
+
+    </nav>
+
+
+
+
+
     <script src="index.js"></script>
+
 </body>
+
+
 
 </html>
