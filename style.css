@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    background-color:rgba(0, 0, 0, 0.89);
+  }
+
+nav{
+     display: flex;
+     flex-direction:column;
+     background-color: pink;
+     height:150px ;
+     padding: 10px;
+     color: white;
+    font-family: 'Roboto', sans-serif;
+  
+   }
+  
+  .caja-general{
+  
+  display: flex;
+  justify-content: center;
+  }
+  
+   h1{
+     height:60px;
+     text-align: center;
+   }
+  
+  .caja-uno , .caja-dos ,  .caja-tres{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin:6px;
+  }
+  
+  .botones-nav{
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+    height: 50px;
+    background-color: transparent;
+  }
