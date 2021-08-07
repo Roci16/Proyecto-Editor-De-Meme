@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    background-color:rgba(0, 0, 0, 0.89);
+  
+  }
+  /* Comienzo de Nav */
+   nav{
+     display: flex;
+     flex-direction:column;
+     justify-content: center;
+     align-content: center;
+     background-color: #212F3D;
+     width: 75%;
+     height:150px;
+     padding: 10px;
+     color: white;
+     font-family: 'Roboto', sans-serif;
+   }
+  
+  
+  .caja-general{
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content:  space-around;
+  align-content:  space-around;
+  background-color: red;
+  width:60%;
+  }
+  
+  h1{
+    height:60px;
+    text-align: center;
+   }
+  
+  .caja-uno , .caja-dos ,  .caja-tres{
+    width: 50px;
+    height: 50px;
+    margin:6px;
+    margin-right: 10px;
+   
+  }
+  
+  .botones-nav{
+    display: flex;
+    width: 120px;
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+  }
+  
+  
+  /* Final del nav */
+  
+  /* comienzo main */
+  .caja-imagen{
+    width:80%;
+    background-color: red;
+    display: flex;
+    justify-content:center;
+  }
+  
+  .caja-meme{
+    height:400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .seccion-main{
+    min-width: 77%;
+    height:100vh;
+    background-color: blue;
+    display: flex;
+    justify-content:center;
+    align-content: center;
+  }
+  
+  .main-section{
+    width:100%;
+    display:flex;
+    align-content: space-around;
+  }
+  
+  /* fin main */
+  
+  
+  /* Comienzo de formulario imagen */
+  .seccion-imagen-formulario{
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #212F3D;
+  color:white;
+  align-items:flex-end;
+  width: 500px;
+  z-index:1;
+  }
+  
+  .formulario-imagen{
+    display: flex;
+    flex-direction:column;
+    height:100%;
+    border:1px solid greenyellow;
+  }
+  
+  
+  
+  .seccion-texto-formulario{
+    display: none;
+  }

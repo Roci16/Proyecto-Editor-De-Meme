@@ -5,32 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Proyecto Editor de memes </title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/55efe9bfd6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <nav>
         <h1>Generador de memes</h1>
-        <div><button><i class="far fa-file-image"></i>Imagen</button></div>
-        <div> <button><img src="https://img.icons8.com/ios/15/000000/a.png"/>Texto</button></div>
-        <div><button><i class="far fa-lightbulb"></i>Modo oscuro</button></div>
+
+        <div class="caja-general">
+        <div class="caja-uno"><button class="botones-nav boton-uno"><i class="far fa-file-image"></i>Imagen</button></div>
+        <div class="caja-dos"> <button class="botones-nav boton-dos"><img src="https://img.icons8.com/ios/15/000000/a.png"/>Texto</button></div>
+        <div class="caja-tres"><button class="botones-nav boton-tres"><i class="far fa-lightbulb"></i>Modo oscuro</button></div>
+        </div>
+    </nav>
 
         <main>
-            <section>
-                <div>
+          <div class="main-section">
+            <section class="seccion-main">
+              <div class="caja-imagen">
+                <div class="caja-meme">
                     <p>TOP TEXT</p>
                     <div><img src=""></img>
-                    </div>
                     <p>BOTTOM TEXT</p>
                 </div>
                 <div class="descargar-boton"><button><i class="fas fa-download"></i>Descargar meme</button></div>
+                </div>
             </section>
-            <section>
-                <h2>Imagen</h2>
-                <form>
+            <section class="seccion-imagen-formulario">
+               
+                <form class="formulario-imagen">
+                  <h2>Imagen</h2>
+
                     <label>
                         URL
                        <input type="text"> 
@@ -52,8 +63,6 @@
                      </select>
 
                     </label>
-                   
-
 
                     <label>FILTROS</label>
                     
@@ -70,14 +79,17 @@
                 </form>
                 <div><button>Restablecer Filtros</button></div>
             </section>
-            <section>
+
+            <section class="seccion-texto-formulario">
+
                 <h2>TEXTO</h2>
                 <form>
 
 
                     <label>SUPERIOR</label>
-                  
 
+                  
+             
                     <textarea rows="2" cols="14"></textarea>
                     <input type="checkbox" value="">Sin texto superior INFERIOR
                     <textarea rows="2" cols="14"></textarea>
@@ -85,7 +97,9 @@
                     <select name="tipo-letra">
                     <option>Arial</option>
                     <option>Arial Black</option>
+
                     <option>American Type writter</option>
+
                     <option>Andale Mono</option>
                     <option>Comic Sans MS</option>
                     <option>Helvetica</option>
@@ -119,12 +133,12 @@
             </section>
 
 
+          </div>
+
         </main>
 
 
 
-
-    </nav>
 
 
 
