@@ -16,13 +16,15 @@
 
 <body>
     <div class="caja-general">
+        <!-- barra de navegacion superior -->
         <nav>
+
             <h1>Generador de memes</h1>
-            <button>
+            <button id="botonImagen">
                 <i class="far fa-file-image"></i>
                 Imagen
             </button>
-            <button>
+            <button id="botonTexto">
                 <img src="https://img.icons8.com/ios/15/000000/a.png"/>
                 Texto
             </button>
@@ -32,6 +34,7 @@
             </button>
         </nav>
         <main>
+            <!-- visualizador de imagen -->
             <div class="caja-del-meme">
                 <p>TOP TEXT</p>
                 <div>
@@ -41,9 +44,10 @@
             </div>
         </main>
     </div>
+    <!-- Aside formularios -->
     <aside class="caja-costado">
         <!--Formulario Imagen  -->
-        <div>
+        <div id="formularioImagen">
             <h2>Imagenes</h2>
             <form>
                 <label>
@@ -107,21 +111,22 @@
             <button>Reestablecer filtros</button>
         </div>
         <!-- Formulario Texto -->
-        <div>
+        <div id="formularioTexto">
             <h2>TEXTO</h2>
             <!-- Texto en imagen -->
-            <label>
+            <form>
+                <label>
                     SUPERIOR
                     <textarea name="texto-superior" id="" cols="20" rows="1">TOP TEXT</textarea>
                     <input type="checkbox" name="quitar-texto-superior" id="">Sin texto superior
                 </label>
-            <label>
+                <label>
                     INFERIOR
                     <textarea name="texto-superior" id="" cols="20" rows="1">TOP TEXT</textarea>
                     <input type="checkbox" name="quitar-texto-inferior" id="">Sin texto inferior
                 </label>
-            <!-- Fuente -->
-            <label>
+                <!-- Fuente -->
+                <label>
                     <h3>FUENTE</h3>
                     <select name="tipo-fuente">
                         <option>Arial</option>
@@ -139,36 +144,37 @@
                        <button><i class="fas fa-align-right"></i></button>
                        <button><i class="fas fa-align-left"></i></button>
                 </label>
-            <!-- Color de letra y fondo -->
-            <label>
+                <!-- Color de letra y fondo -->
+                <label>
                     COLOR
                     <input type="color" name="color-letra" id="">
                 </label>
-            <label>
+                <label>
                     FONDO 
                     <input type="color" name="color-fondo" id="">
                 </label>
-            <input type="checkbox" name="fondo-transparente" id=""> Fondo transparente
-            <!-- Contorno -->
-            <label>
+                <input type="checkbox" name="fondo-transparente" id=""> Fondo transparente
+                <!-- Contorno -->
+                <label>
                     <h3>CONTORNO</h3>
                     <button>Ninguno</button>
                     <button>Claro</button>
                     <button>Oscuro</button>
                 </label>
-            <!-- Espaciado -->
-            <label>
+                <!-- Espaciado -->
+                <label>
                     <h3>ESPACIADO</h3>
                     <input type="number" name="espaciado" id="">
                 </label>
-            <!-- Interlineado -->
-            <label>
+                <!-- Interlineado -->
+                <label>
                     <h3>INTERLINEADO</h3>
                     <input type="number" name="interlineado" id="">
                 </label>
+            </form>
         </div>
     </aside>
-
+    <script src="index.js"></script>
 </body>
 
 </html>

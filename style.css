@@ -2,19 +2,13 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
+    font-family: 'Roboto';
 }
 
 .caja-general {
     /* border: 1px solid red; */
     /* background-color: cadetblue; */
     width: 85%;
-    height: 100%;
-}
-
-.caja-costado {
-    /* border: 1px solid blue; */
-    background-color: pink;
-    width: 20%;
     height: 100%;
 }
 
@@ -35,4 +29,15 @@ main {
     background-color: white;
     height: 70%;
     width: 40%;
+}
+
+.caja-costado {
+    /* border: 1px solid blue; */
+    background-color: pink;
+    width: 20%;
+    /* height: 100%; */
+}
+
+#formularioTexto {
+    display: none;
 }
