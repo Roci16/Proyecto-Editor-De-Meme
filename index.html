@@ -1,181 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Proyecto editor de memes</title>
+		<link rel="stylesheet" href="reset.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/55efe9bfd6.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto editor de memes</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/55efe9bfd6.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <div class="caja-general">
-        <!-- barra de navegacion superior -->
-        <nav>
-            <h1>Generador de memes</h1>
-            <div class="caja-botones">
-                <button id="botonImagen">
-                <i class="far fa-file-image"></i>
-                Imagen
-              </button>
-                <button id="botonTexto">
-                <img src="https://img.icons8.com/ios/15/000000/a.png"/>
-                Texto
-            </button>
-                <button>
-                <i class="far fa-lightbulb"></i>
-                Modo oscuro
-            </button>
-            </div>
-        </nav>
-        <main>
-            <!-- visualizador de imagen -->
-            <div class="caja-del-meme">
-                <p>TOP TEXT</p>
-                <div>
-                    <img src="" alt="">
-                </div>
-                <p>BOTTOM TEXT</p>
-            </div>
-        </main>
-    </div>
-    <!-- Aside formularios -->
-    <aside class="caja-costado">
-        <!--Formulario Imagen  -->
-        <div id="formularioImagen">
-            <h2>Imagenes</h2>
-            <form>
-                <label>
-                        URL
-                        <input type="text" name="url" id="url">
-                    </label>
-                <!-- fondo -->
-                <label>
-                        FONDO
-                        <input type="color" name="selector-de-color">
-                        <select id="selector-colores-fondo">
-                            <option>Ninguno</option>
-                            <option>Aclarar</option>
-                            <option>Oscurecer</option>
-                            <option>Diferencia</option>
-                            <option>Luminosidad</option>
-                            <option>Multiplicar</option>
-                      </select>
-                  </label>
-                <!-- filtros -->
-                <label>
-                        <h3>FILTROS</h3>
-                    </label>
-                <label>
-                        BRILLO
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        OPACIDAD
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        CONTRASTE
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        DESENFOQUE
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        ESCALA DE GRISES
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        SEPIA
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        HUE
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        SATIRADO
-                        <input type="range" min="0" max="100">
-                    </label>
-                <label>
-                        NEGATIVO
-                        <input type="range" min="0" max="100">
-                    </label>
-            </form>
-            <button>Reestablecer filtros</button>
-        </div>
-        <!-- Formulario Texto -->
-        <div id="formularioTexto">
-            <h2>TEXTO</h2>
-            <!-- Texto en imagen -->
-            <form>
-                <label>
-                    SUPERIOR
-                    <textarea name="texto-superior" id="" cols="20" rows="1">TOP TEXT</textarea>
-                    <input type="checkbox" name="quitar-texto-superior" id="">Sin texto superior
-                </label>
-                <label>
-                    INFERIOR
-                    <textarea name="texto-superior" id="" cols="20" rows="1">TOP TEXT</textarea>
-                    <input type="checkbox" name="quitar-texto-inferior" id="">Sin texto inferior
-                </label>
-                <!-- Fuente -->
-                <label>
-                    <h3>FUENTE</h3>
-                    <select name="tipo-fuente">
-                        <option>Arial</option>
-                        <option>Arial Black</option>
-                        <option>American Typewriter</option>
-                        <option>Andale Mono</option>
-                        <option>Comic Sans MS</option>
-                        <option>Helvetica</option>
-                        <option>Impact</option>
-                        <option>Verdana</option>
-                        <option>Times New Roman</option>
-                       </select>
-                       <input type="number" name="100">
-                       <button><i class="fas fa-align-center"></i></button>
-                       <button><i class="fas fa-align-right"></i></button>
-                       <button><i class="fas fa-align-left"></i></button>
-                </label>
-                <!-- Color de letra y fondo -->
-                <label>
-                    COLOR
-                    <input type="color" name="color-letra" id="">
-                </label>
-                <label>
-                    FONDO 
-                    <input type="color" name="color-fondo" id="">
-                </label>
-                <input type="checkbox" name="fondo-transparente" id=""> Fondo transparente
-                <!-- Contorno -->
-                <label>
-                    <h3>CONTORNO</h3>
-                    <button>Ninguno</button>
-                    <button>Claro</button>
-                    <button>Oscuro</button>
-                </label>
-                <!-- Espaciado -->
-                <label>
-                    <h3>ESPACIADO</h3>
-                    <input type="number" name="espaciado" id="">
-                </label>
-                <!-- Interlineado -->
-                <label>
-                    <h3>INTERLINEADO</h3>
-                    <input type="number" name="interlineado" id="">
-                </label>
-            </form>
-        </div>
-    </aside>
-    <script src="index.js"></script>
-</body>
-
+	<body>
+		<div class="caja-general">
+			<!-- barra de navegacion superior -->
+			<nav>
+				<h1>Generador de memes</h1>
+				<div class="caja-botones">
+					<button id="botonImagen">
+						<i class="far fa-file-image"></i>
+						Imagen
+					</button>
+					<button id="botonTexto">
+						<img src="https://img.icons8.com/ios/15/000000/a.png" />
+						Texto
+					</button>
+					<button>
+						<i class="far fa-lightbulb"></i>
+						Modo oscuro
+					</button>
+				</div>
+			</nav>
+			<main>
+				<!-- visualizador de imagen -->
+				<div class="caja-del-meme">
+					<p>TOP TEXT</p>
+					<div>
+						<img src="" alt="" />
+					</div>
+					<p>BOTTOM TEXT</p>
+				</div>
+			</main>
+		</div>
+		<!-- Aside formularios -->
+		<aside class="caja-costado">
+			<!--Formulario Imagen  -->
+			<div id="formularioImagen">
+				<h2>Imagenes</h2>
+				<form>
+					<label>
+						URL
+						<input type="text" name="url" id="url" />
+					</label>
+					<!-- fondo -->
+					<label>
+						FONDO
+						<input type="color" name="selector-de-color" />
+						<select id="selector-colores-fondo">
+							<option>Ninguno</option>
+							<option>Aclarar</option>
+							<option>Oscurecer</option>
+							<option>Diferencia</option>
+							<option>Luminosidad</option>
+							<option>Multiplicar</option>
+						</select>
+					</label>
+					<!-- filtros -->
+					<label>
+						<h3>FILTROS</h3>
+					</label>
+					<label>
+						BRILLO
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						OPACIDAD
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						CONTRASTE
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						DESENFOQUE
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						ESCALA DE GRISES
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						SEPIA
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						HUE
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						SATIRADO
+						<input type="range" min="0" max="100" />
+					</label>
+					<label>
+						NEGATIVO
+						<input type="range" min="0" max="100" />
+					</label>
+				</form>
+				<button>Reestablecer filtros</button>
+			</div>
+			<!-- Formulario Texto -->
+			<div id="formularioTexto">
+				<h2>TEXTO</h2>
+				<!-- Texto en imagen -->
+				<form>
+					<label>
+						SUPERIOR
+						<textarea name="texto-superior" id="" cols="20" rows="1">
+TOP TEXT</textarea
+						>
+						<input type="checkbox" name="quitar-texto-superior" id="" />Sin
+						texto superior
+					</label>
+					<label>
+						INFERIOR
+						<textarea name="texto-superior" id="" cols="20" rows="1">
+TOP TEXT</textarea
+						>
+						<input type="checkbox" name="quitar-texto-inferior" id="" />Sin
+						texto inferior
+					</label>
+					<!-- Fuente -->
+					<label>
+						<h3>FUENTE</h3>
+						<select name="tipo-fuente">
+							<option>Arial</option>
+							<option>Arial Black</option>
+							<option>American Typewriter</option>
+							<option>Andale Mono</option>
+							<option>Comic Sans MS</option>
+							<option>Helvetica</option>
+							<option>Impact</option>
+							<option>Verdana</option>
+							<option>Times New Roman</option>
+						</select>
+						<input type="number" name="100" />
+						<button><i class="fas fa-align-center"></i></button>
+						<button><i class="fas fa-align-right"></i></button>
+						<button><i class="fas fa-align-left"></i></button>
+					</label>
+					<!-- Color de letra y fondo -->
+					<label>
+						COLOR
+						<input type="color" name="color-letra" id="" />
+					</label>
+					<label>
+						FONDO
+						<input type="color" name="color-fondo" id="" />
+					</label>
+					<input type="checkbox" name="fondo-transparente" id="" /> Fondo
+					transparente
+					<!-- Contorno -->
+					<label>
+						<h3>CONTORNO</h3>
+						<button>Ninguno</button>
+						<button>Claro</button>
+						<button>Oscuro</button>
+					</label>
+					<!-- Espaciado -->
+					<label>
+						<h3>ESPACIADO</h3>
+						<input type="number" name="espaciado" id="" />
+					</label>
+					<!-- Interlineado -->
+					<label>
+						<h3>INTERLINEADO</h3>
+						<input type="number" name="interlineado" id="" />
+					</label>
+				</form>
+			</div>
+		</aside>
+		<script src="index.js"></script>
+	</body>
 </html>
