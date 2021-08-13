@@ -8,6 +8,7 @@ botonTexto.onclick = () => {
     formularioImagen.style.display = ("none")
     formularioTexto.style.display = ("block")
 }
+
 botonImagen.onclick = () => {
     formularioImagen.style.display = ("block")
     formularioTexto.style.display = ("none")
