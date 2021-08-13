@@ -87,3 +87,40 @@ main {
 #formularioTexto {
 	display: none;
 }
+/* formulario imagen */
+.formulario-imagen {
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+}
+form {
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+}
+label {
+	margin: 10px 0px 10px 0px;
+	font-size: 14px;
+}
+h2 {
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
+}
+.selector-de-colores {
+	margin: 15px 0px 15px 0px;
+}
+.selector-de-colores input {
+	margin: 10px;
+}
+.titulo-filtros {
+	font-size: 16px;
+	font-weight: 600;
+}
+.restablece-filtro {
+	margin: 10px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+}
+/* final formulario imagen */
