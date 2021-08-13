@@ -22,7 +22,7 @@
 	<body>
 		<div class="caja-general">
 			<!-- barra de navegacion superior -->
-			<nav>
+			<nav class="modo-claro modo-oscuro">
 				<h1>Generador de memes</h1>
 				<div class="caja-botones">
 					<button id="botonImagen">
@@ -33,18 +33,21 @@
 						<img src="https://img.icons8.com/ios/15/000000/a.png" />
 						Texto
 					</button>
-					<button>
+					<button id="modoOscuro">
 						<i class="far fa-lightbulb"></i>
 						Modo oscuro
 					</button>
 				</div>
 			</nav>
-			<main>
+			<main class="modo-claro modo-oscuro">
 				<!-- visualizador de imagen -->
 				<div class="caja-del-meme">
 					<p>TOP TEXT</p>
 					<div>
-						<img id="imagen" src="https://s3.us-west-2.amazonaws.com/s3.laprensa.com.ni-bq/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-02-at-09.56.46-1000x600.jpeg">
+						<img
+							id="imagen"
+							src="https://s3.us-west-2.amazonaws.com/s3.laprensa.com.ni-bq/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-02-at-09.56.46-1000x600.jpeg"
+						/>
 					</div>
 					<p>BOTTOM TEXT</p>
 				</div>
@@ -52,13 +55,13 @@
 			</main>
 		</div>
 		<!-- Aside formularios -->
-		<aside class="caja-costado">
+		<aside class="caja-costado modo-claro modo-oscuro">
 			<!--Formulario Imagen  -->
 			<div class="formulario-imagen" id="formularioImagen">
 				<h2>IMAGEN</h2>
 				<form>
 					<label for="url">URL</label>
-					<input type="text" class="url" name="url" id="inputTexto"  />
+					<input type="text" class="url" name="url" id="inputTexto" />
 
 					<!-- fondo -->
 					<div class="selector-de-colores">
