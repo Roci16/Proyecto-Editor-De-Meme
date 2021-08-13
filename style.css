@@ -1,126 +1,172 @@
 body {
-	display: flex;
-	flex-direction: row;
-	height: 100vh;
-	font-family: "Roboto";
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: "Roboto";
+}
+
+p,
+h1,
+h2,
+label,
+button {
+    font-family: Roboto;
 }
 
 .caja-general {
-	width: 85%;
-	height: 100%;
+    width: 85%;
+    height: 100%;
 }
+
 
 /* Comienzo de nav superior */
 
 nav {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	color: white;
-	background-color: #191e2b;
-	font-family: Roboto;
-	font-size: 35px;
-	height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    background-color: #191e2b;
+    font-family: Roboto;
+    font-size: 35px;
+    height: 15%;
 }
 
-/* .caja-botones {
-	display: flex;
-	flex-direction: row;
-} */
-
 .caja-botones button {
-	border: none;
-	color: white;
-	background-color: transparent;
-	padding: 5px;
-	margin: 5px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    padding: 5px;
+    margin: 5px;
 }
 
 .caja-botones button:hover {
-	background-color: rgba(255, 255, 255, 0.296);
-	margin: 5px;
+    background-color: rgba(255, 255, 255, 0.296);
+    margin: 5px;
 }
+
 
 /* Final de nav superior */
 
+
+/* comienzo del main */
+
 main {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	background-color: orchid;
-	height: 85%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: orchid;
+    height: 85%;
 }
 
 .caja-del-meme {
-	background-color: white;
-	height: 70%;
-	width: 40%;
+    background-color: white;
+    height: 85%;
+    width: 50%;
 }
+
+.caja-del-meme p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    font-size: 35px;
+    font-weight: bold;
+    height: 15%;
+    background-color: white;
+}
+
+.caja-del-meme div {
+    height: 70%;
+    background-color: black;
+}
+
 
 /* boton de descargar meme */
 
 #meme-descarga {
-	margin-top: 10px;
-	background-color: #1b5e20;
-	border: 1px solid rgba(32, 148, 32, 0.659);
-	color: white;
-	width: 160px;
-	height: 35px;
+    margin-top: 10px;
+    background-color: #1b5e20;
+    border: 1px solid rgba(32, 148, 32, 0.659);
+    color: white;
+    width: 160px;
+    height: 35px;
 }
 
 #meme-descarga:hover {
-	background-color: #3f9943;
+    background-color: #3f9943;
 }
+
 
 /* final del boton descargar memme */
 
+
+/* Final del main */
+
 .caja-costado {
-	background-color: pink;
-	width: 20%;
-	/* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    width: 20%;
 }
 
-#formularioTexto {
-	display: none;
-}
-/* formulario imagen */
-.formulario-imagen {
-	padding: 25px;
-	display: flex;
-	flex-direction: column;
-}
+
+/* Comienzo del formulario Imagen */
+
+
+/* .formulario-imagen {
+    display: flex;
+    flex-direction: column;
+ } */
+
 form {
-	display: flex;
-	flex-direction: column;
-	padding: 30px;
+    display: flex;
+    flex-direction: column;
 }
+
 label {
-	margin: 10px 0px 10px 0px;
-	font-size: 14px;
+    margin: 10px 0px 10px 0px;
+    font-size: 14px;
 }
+
 h2 {
-	font-size: 20px;
-	text-align: center;
-	font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
 }
+
 .selector-de-colores {
-	margin: 15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
 }
+
 .selector-de-colores input {
-	margin: 10px;
+    margin: 10px;
 }
+
 .titulo-filtros {
-	font-size: 16px;
-	font-weight: 600;
+    font-size: 16px;
+    font-weight: 600;
 }
+
 .restablece-filtro {
-	margin: 10px;
-	height: 40px;
-	border: none;
-	border-radius: 5px;
+    margin: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
 }
+
+
 /* final formulario imagen */
+
+
+/* Comienzo del formulario texto */
+
+#formularioTexto {
+    display: none;
+}
+
+
+/* Final del formulario texto */
