@@ -79,7 +79,10 @@ main {
 
 .caja-del-meme div {
     height: 70%;
-    background-color: black;
+overflow: hidden;
+}
+.caja-del-meme div .imagen {
+  width: 100%;
 }
 
 
