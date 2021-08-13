@@ -54,26 +54,28 @@
 		<!-- Aside formularios -->
 		<aside class="caja-costado">
 			<!--Formulario Imagen  -->
-			<div id="formularioImagen">
+			<div class="formulario-imagen" id="formularioImagen">
 				<h2>IMAGEN</h2>
 				<form>
 					<label for="url">URL</label>
 					<input type="text" name="url" id="url" />
 
 					<!-- fondo -->
-					<label for="selector-de-color">FONDO</label>
-					<input type="color" name="selector-de-color" />
-					<select id="selector-colores-fondo">
-						<option>Ninguno</option>
-						<option>Aclarar</option>
-						<option>Oscurecer</option>
-						<option>Diferencia</option>
-						<option>Luminosidad</option>
-						<option>Multiplicar</option>
-					</select>
+					<div class="selector-de-colores">
+						<label for="selector-de-color">FONDO</label>
+						<input type="color" name="selector-de-color" />
+						<select id="selector-colores-fondo">
+							<option>Ninguno</option>
+							<option>Aclarar</option>
+							<option>Oscurecer</option>
+							<option>Diferencia</option>
+							<option>Luminosidad</option>
+							<option>Multiplicar</option>
+						</select>
+					</div>
 
 					<!-- filtros -->
-					<label>FILTROS</label>
+					<label class="titulo-filtros">FILTROS</label>
 					<label for="brillo">BRILLO</label>
 					<input type="range" id="brillo" min="0" max="100" />
 
@@ -100,8 +102,8 @@
 
 					<label for="negativo">NEGATIVO</label>
 					<input type="range" id="negativo" min="0" max="100" />
+					<button class="restablece-filtro">Restablecer filtros</button>
 				</form>
-				<button>Restablecer filtros</button>
 			</div>
 			<!-- Formulario Texto -->
 			<div id="formularioTexto">
