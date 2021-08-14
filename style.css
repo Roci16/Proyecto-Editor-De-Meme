@@ -31,15 +31,8 @@ button {
 	height: 15%;
 }
 .nav-modo-oscuro {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
 	color: #ffffff;
 	background-color: #062925;
-	font-family: Roboto;
-	font-size: 35px;
-	height: 15%;
 }
 .boton-nav {
 	border: none;
@@ -48,12 +41,12 @@ button {
 	padding: 5px;
 	margin: 5px;
 }
-.botones-modo-oscuro {
-	color: #ffffff;
-}
-.caja-botones button:hover {
+.boton-nav:hover {
 	background-color: rgba(255, 255, 255, 0.296);
 	margin: 5px;
+}
+.boton-nav-oscuro {
+	color: #ffffff;
 }
 
 /* Final de nav superior */
@@ -69,12 +62,7 @@ button {
 	height: 85%;
 }
 .main-modo-oscuro {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	background-color: #044a42;
-	height: 85%;
 }
 .caja-del-meme {
 	background-color: white;
@@ -129,12 +117,8 @@ button {
 	/* height: 100%; */
 }
 .aside-modo-oscuro {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: #3a9188;
 	color: #ffffff;
-	width: 20%;
 }
 /* Comienzo del formulario imagen */
 
@@ -147,11 +131,10 @@ button {
 form {
 	display: flex;
 	flex-direction: column;
-	/* padding: 30px; */
 }
 
 label {
-	margin: 10px 0px 10px 0px;
+	margin: 2% 0% 2% 0%;
 	font-size: 14px;
 }
 
