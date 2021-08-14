@@ -1,12 +1,12 @@
 body {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
 }
 
 .caja-general {
-    width: 85%;
-    height: 100%;
+	width: 85%;
+	height: 100%;
 }
 
 p,
@@ -14,111 +14,113 @@ h1,
 h2,
 label,
 button {
-    font-family: Roboto;
+	font-family: Roboto;
 }
-
 
 /* Comienzo de nav superior */
 
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: white;
-    background-color: #191e2b;
-    font-family: Roboto;
-    font-size: 35px;
-    height: 15%;
+.nav-modo-claro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	color: #424242;
+	background-color: #faf1e6;
+	font-family: Roboto;
+	font-size: 35px;
+	height: 15%;
 }
-
-.caja-botones button {
-    border: none;
-    color: white;
-    background-color: transparent;
-    padding: 5px;
-    margin: 5px;
+.nav-modo-oscuro {
+	color: #ffffff;
+	background-color: #062925;
 }
-
-.caja-botones button:hover {
-    background-color: rgba(255, 255, 255, 0.296);
-    margin: 5px;
+.boton-nav {
+	border: none;
+	color: #424242;
+	background-color: transparent;
+	padding: 5px;
+	margin: 5px;
 }
-
+.boton-nav:hover {
+	background-color: rgba(255, 255, 255, 0.296);
+	margin: 5px;
+}
+.boton-nav-oscuro {
+	color: #ffffff;
+}
 
 /* Final de nav superior */
 
-
 /* Comienzo del main */
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: orchid;
-    height: 85%;
+.main-modo-claro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #f4dfd0;
+	height: 85%;
 }
-
+.main-modo-oscuro {
+	background-color: #044a42;
+}
 .caja-del-meme {
-    background-color: white;
-    height: 85%;
-    width: 50%;
+	background-color: white;
+	height: 85%;
+	width: 50%;
 }
 
 .caja-del-meme p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Roboto;
-    font-size: 35px;
-    font-weight: bold;
-    height: 15%;
-    background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Roboto;
+	font-size: 35px;
+	font-weight: bold;
+	height: 15%;
+	background-color: white;
 }
 
 .caja-del-meme div {
-    height: 70%;
-overflow: hidden;
+	height: 70%;
+	overflow: hidden;
 }
 .caja-del-meme div .imagen {
-  width: 100%;
+	width: 100%;
 }
-
 
 /* boton de descargar meme */
 
 #meme-descarga {
-    margin-top: 10px;
-    background-color: #1b5e20;
-    border: 1px solid rgba(32, 148, 32, 0.659);
-    color: white;
-    width: 160px;
-    height: 35px;
+	margin-top: 10px;
+	background-color: #1b5e20;
+	border: 1px solid rgba(32, 148, 32, 0.659);
+	color: white;
+	width: 160px;
+	height: 35px;
 }
 
 #meme-descarga:hover {
-    background-color: #3f9943;
+	background-color: #3f9943;
 }
-
 
 /* final del boton descargar memme */
 
-
 /* Final del main */
 
-.caja-costado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: pink;
-    width: 20%;
-    /* height: 100%; */
+.aside-modo-claro {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #e4efe7;
+	width: 20%;
+	/* height: 100%; */
 }
-
-
+.aside-modo-oscuro {
+	background-color: #3a9188;
+	color: #ffffff;
+}
 /* Comienzo del formulario imagen */
-
 
 /* .formulario-imagen {
 	padding: 25px;
@@ -127,67 +129,63 @@ overflow: hidden;
 } */
 
 form {
-    display: flex;
-    flex-direction: column;
-    /* padding: 30px; */
+	display: flex;
+	flex-direction: column;
 }
 
 label {
-    margin: 10px 0px 10px 0px;
-    font-size: 14px;
+	margin: 2% 0% 2% 0%;
+	font-size: 14px;
 }
 
 h2 {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 600;
 }
 
 .selector-de-colores {
-    margin: 15px 0px 15px 0px;
+	margin: 15px 0px 15px 0px;
 }
 
 .selector-de-colores input {
-    margin: 10px;
+	margin: 10px;
 }
 
 .titulo-filtros {
-    font-size: 16px;
-    font-weight: 600;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .restablece-filtro {
-    margin: 10px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
+	margin: 10px;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
 }
 
 .restablece-filtro:hover {
-    background-color: #d1d9d9;
-    transition: 0.1s;
+	background-color: #d1d9d9;
+	transition: 0.1s;
 }
 
 .url {
-    border: none;
-    border-radius: 5px;
-    height: 30px;
+	border: none;
+	border-radius: 5px;
+	height: 30px;
 }
 
 .url:hover {
-    background-color: #d1d9d9;
-    transition: 0.1s;
+	background-color: #d1d9d9;
+	transition: 0.1s;
 }
 
-
 /* final formulario imagen */
-
 
 /* Comienzo formulario Texto */
 
 #formularioTexto {
-    display: none;
+	display: none;
 }
-
 
 /* Final formulario texto */
