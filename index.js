@@ -21,16 +21,14 @@ botonImagen.onclick = () => {
 //funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
-	console.log("cambiar modo");
-	navModoOscuro.classList.remove("nav-modo-claro");
-	navModoOscuro.classList.add("nav-modo-oscuro");
-	console.log("hola");
-	mainModoOscuro.classList.remove("main-modo-claro");
-	mainModoOscuro.classList.add("main-modo-oscuro");
-	asideModoOscuro.classList.remove("aside-modo-claro");
-	asideModoOscuro.classList.add("aside-modo-oscuro");
-	botonesNavOscuro.classList.remove("boton-nav");
-	botonesNavOscuro.classList.add("botones-modo-oscuro");
+	navModoOscuro.classList.toggle("nav-modo-oscuro");
+	mainModoOscuro.classList.toggle("main-modo-oscuro");
+	asideModoOscuro.classList.toggle("aside-modo-oscuro");
+	// Recorro la colección HTML para hacer toggle de cada uno de los botones
+	for (let i = 0; i < botonesNavOscuro.length; i++) {
+		botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
+	}
+
 };
 
 // Funcion URL
