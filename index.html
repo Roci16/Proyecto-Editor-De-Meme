@@ -80,31 +80,66 @@
 					<!-- filtros -->
 					<label class="titulo-filtros">FILTROS</label>
 					<label for="brillo">BRILLO</label>
-					<input type="range" id="brillo" min="0" max="100" />
+					<input
+						type="range"
+						id="brillo"
+						min="0"
+						max="1"
+						value="1"
+						step="0.1"
+					/>
 
 					<label for="opacidad">OPACIDAD</label>
-					<input type="range" id="opacidad" min="0" max="100" />
+					<input
+						type="range"
+						id="opacidad"
+						min="0"
+						max="1"
+						value="1"
+						step="0.1"
+					/>
 
 					<label for="contraste">CONTRASTE</label>
-					<input type="range" id="contraste" min="0" max="100" />
+					<input type="range" id="contraste" min="100" max="1000" value="100" />
 
 					<label for="desenfoque">DESENFOQUE</label>
-					<input type="range" id="desenfoque" min="0" max="100" />
+					<input
+						type="range"
+						id="desenfoque"
+						min="0"
+						max="10"
+						value="0"
+						step="0.1"
+					/>
 
 					<label for="escala-grises">ESCALA DE GRISES</label>
-					<input type="range" id="escala-grises" min="0" max="100" />
+					<input type="range" id="escala-grises" min="0" max="100" value="0" />
 
 					<label for="sepia">SEPIA</label>
-					<input type="range" id="sepia" min="0" max="100" />
+					<input type="range" id="sepia" min="0" max="100" value="0" />
 
 					<label for="hue">HUE</label>
-					<input type="range" id="hue" min="0" max="100" />
+					<input type="range" id="hue" min="0" max="360" value="0" />
 
 					<label for="saturado">SATURADO</label>
-					<input type="range" id="saturado" min="0" max="100" />
+					<input
+						type="range"
+						id="saturado"
+						min="100"
+						max="1000"
+						value="100"
+						step="10"
+					/>
 
 					<label for="negativo">NEGATIVO</label>
-					<input type="range" id="negativo" min="0" max="100" />
+					<input
+						type="range"
+						id="negativo"
+						min="0"
+						max="1"
+						value="0"
+						step="0.1"
+					/>
 					<button class="restablece-filtro">Restablecer filtros</button>
 				</form>
 			</div>
