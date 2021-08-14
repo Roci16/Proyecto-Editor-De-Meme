@@ -7,6 +7,16 @@ const navModoOscuro = document.querySelector("nav");
 const mainModoOscuro = document.querySelector("main");
 const asideModoOscuro = document.querySelector("aside");
 const botonesNavOscuro = document.getElementsByClassName("boton-nav");
+const cajaImagenMeme = document.getElementById("imagen");
+const filtroBrillo = document.getElementById("brillo");
+const filtroOpacidad = document.getElementById("opacidad");
+const filtroContraste = document.getElementById("contraste");
+const filtroDesenfoque = document.getElementById("desenfoque");
+const filtroEscalaDeGrises = document.getElementById("escala-grises");
+const filtroSepia = document.getElementById("sepia");
+const filtroHue = document.getElementById("hue");
+const filtroSaturado = document.getElementById("saturado");
+const filtroNegativo = document.getElementById("negativo");
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -18,6 +28,7 @@ botonImagen.onclick = () => {
 	formularioImagen.style.display = "block";
 	formularioTexto.style.display = "none";
 };
+
 //funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
@@ -28,7 +39,6 @@ modoOscuro.onclick = () => {
 	for (let i = 0; i < botonesNavOscuro.length; i++) {
 		botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
 	}
-
 };
 
 // Funcion URL
@@ -41,3 +51,26 @@ const cambio = () => {
 };
 
 inputTexto.onchange = cambio;
+
+//Funcion cambiar filtros
+const cambioFiltro = () => {
+	const brillo = filtroBrillo.value;
+	const opacidad = filtroOpacidad.value;
+	const contraste = filtroContraste.value;
+	const desenfoque = filtroDesenfoque.value;
+	const escala = filtroEscalaDeGrises.value;
+	const sepia = filtroSepia.value;
+	const hue = filtroHue.value;
+	const saturado = filtroSaturado.value;
+	const negativo = filtroNegativo.value;
+	cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
+};
+filtroBrillo.onchange = cambioFiltro;
+filtroOpacidad.onchange = cambioFiltro;
+filtroContraste.onchange = cambioFiltro;
+filtroDesenfoque.onchange = cambioFiltro;
+filtroEscalaDeGrises.onchange = cambioFiltro;
+filtroSepia.onchange = cambioFiltro;
+filtroHue.onchange = cambioFiltro;
+filtroSaturado.onchange = cambioFiltro;
+filtroNegativo.onchange = cambioFiltro;
