@@ -17,53 +17,54 @@ const filtroSepia = document.getElementById("sepia");
 const filtroHue = document.getElementById("hue");
 const filtroSaturado = document.getElementById("saturado");
 const filtroNegativo = document.getElementById("negativo");
+const formImg = document.getElementById("seccionFormImagen")
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
-	formularioImagen.style.display = "none";
-	formularioTexto.style.display = "block";
+    formularioImagen.style.display = "none";
+    formularioTexto.style.display = "block";
 };
 
 botonImagen.onclick = () => {
-	formularioImagen.style.display = "block";
-	formularioTexto.style.display = "none";
+    formularioImagen.style.display = "block";
+    formularioTexto.style.display = "none";
 };
 
 //funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
-	navModoOscuro.classList.toggle("nav-modo-oscuro");
-	mainModoOscuro.classList.toggle("main-modo-oscuro");
-	asideModoOscuro.classList.toggle("aside-modo-oscuro");
-	// Recorro la colección HTML para hacer toggle de cada uno de los botones
-	for (let i = 0; i < botonesNavOscuro.length; i++) {
-		botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
-	}
+    navModoOscuro.classList.toggle("nav-modo-oscuro");
+    mainModoOscuro.classList.toggle("main-modo-oscuro");
+    asideModoOscuro.classList.toggle("aside-modo-oscuro");
+    // Recorro la colección HTML para hacer toggle de cada uno de los botones
+    for (let i = 0; i < botonesNavOscuro.length; i++) {
+        botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
+    }
 };
 
 // Funcion URL
 const cambio = () => {
-	const inputTexto = document.getElementById("inputTexto").value;
-	const imagen = document.getElementById("imagen");
+    const inputTexto = document.getElementById("inputTexto").value;
+    const imagen = document.getElementById("imagen");
 
-	imagen.removeAttribute("src");
-	imagen.setAttribute("src", inputTexto);
+    imagen.removeAttribute("src");
+    imagen.setAttribute("src", inputTexto);
 };
 
 inputTexto.onchange = cambio;
 
 //Funcion cambiar filtros
 const cambioFiltro = () => {
-	const brillo = filtroBrillo.value;
-	const opacidad = filtroOpacidad.value;
-	const contraste = filtroContraste.value;
-	const desenfoque = filtroDesenfoque.value;
-	const escala = filtroEscalaDeGrises.value;
-	const sepia = filtroSepia.value;
-	const hue = filtroHue.value;
-	const saturado = filtroSaturado.value;
-	const negativo = filtroNegativo.value;
-	cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
+    const brillo = filtroBrillo.value;
+    const opacidad = filtroOpacidad.value;
+    const contraste = filtroContraste.value;
+    const desenfoque = filtroDesenfoque.value;
+    const escala = filtroEscalaDeGrises.value;
+    const sepia = filtroSepia.value;
+    const hue = filtroHue.value;
+    const saturado = filtroSaturado.value;
+    const negativo = filtroNegativo.value;
+    cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
 };
 filtroBrillo.onchange = cambioFiltro;
 filtroOpacidad.onchange = cambioFiltro;
@@ -74,3 +75,19 @@ filtroSepia.onchange = cambioFiltro;
 filtroHue.onchange = cambioFiltro;
 filtroSaturado.onchange = cambioFiltro;
 filtroNegativo.onchange = cambioFiltro;
+
+
+// funcion select imagen
+const cambioImagenSelect = () => {
+    const selectorDeModoImagen = document.getElementById("selector-colores-fondo").value
+    cajaImagenMeme.style.backgroundBlendMode = (selectorDeModoImagen)
+
+}
+formImg.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
+
+formImg.addEventListener('change', () => {
+    cambioImagenSelect();
+});
+cambioImagenSelect();
