@@ -50,7 +50,7 @@ const cambio = () => {
 	imagen.setAttribute("src", inputTexto);
 };
 
-inputTexto.onchange = cambio;
+inputTexto.oninput = cambio;
 
 //Funcion cambiar filtros
 const cambioFiltro = () => {
