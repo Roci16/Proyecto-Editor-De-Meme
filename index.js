@@ -74,3 +74,20 @@ filtroSepia.onchange = cambioFiltro;
 filtroHue.onchange = cambioFiltro;
 filtroSaturado.onchange = cambioFiltro;
 filtroNegativo.onchange = cambioFiltro;
+
+// Funcion restablacer filtros
+
+reestablecerFiltros. onclick = () =>{
+	filtroBrillo. valor = 1
+	filtroOpacidad. valor = 1
+	filtroContraste. valor = 100
+	filtroDesenfoque. valor = 0
+	filtroEscalaDeGrises. valor = 0
+	filtroSepia. valor = 0
+	filtroHue. valor = 0
+	filtroSaturado. valor = 100
+	filtroNegativo. valor = 0
+   
+	   cambioFiltro()
+	   return(false)
+   } 
