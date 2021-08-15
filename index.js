@@ -17,7 +17,7 @@ const filtroSepia = document.getElementById("sepia");
 const filtroHue = document.getElementById("hue");
 const filtroSaturado = document.getElementById("saturado");
 const filtroNegativo = document.getElementById("negativo");
-
+const reestablecerFiltros = document.getElementById("botonRestablecer")
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
 	formularioImagen.style.display = "none";
@@ -74,3 +74,21 @@ filtroSepia.onchange = cambioFiltro;
 filtroHue.onchange = cambioFiltro;
 filtroSaturado.onchange = cambioFiltro;
 filtroNegativo.onchange = cambioFiltro;
+
+
+// Funcion restablacer filtros
+
+reestablecerFiltros.onclick = () =>{
+	filtroBrillo.value = 1
+	filtroOpacidad.value = 1
+	filtroContraste.value = 100
+	filtroDesenfoque.value = 0
+	filtroEscalaDeGrises.value = 0
+	filtroSepia.value = 0
+	filtroHue.value = 0
+	filtroSaturado.value = 100
+	filtroNegativo.value = 0
+
+	cambioFiltro()
+	return(false)
+}
