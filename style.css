@@ -65,6 +65,8 @@ button {
 	background-color: #044a42;
 }
 .caja-del-meme {
+	display: flex;
+	flex-direction: column;
 	background-color: black;
 	height: 85%;
 	width: 50%;
@@ -90,7 +92,14 @@ button {
 }
 
 #imagen {
+	height: 100%;
 	background-size: cover;
+}
+
+.top-none,
+.bottom-none{
+display: none !important;
+position: absolute;
 }
 .top-transparencia,
 .bottom-transparencia{
