@@ -17,7 +17,9 @@ const filtroSepia = document.getElementById("sepia");
 const filtroHue = document.getElementById("hue");
 const filtroSaturado = document.getElementById("saturado");
 const filtroNegativo = document.getElementById("negativo");
-const reestablecerFiltros = document.getElementById("botonRestablecer")
+const reestablecerFiltros = document.getElementById("botonRestablecer");
+const colorDeFondo = document.getElementById("selectorColoresFondo");
+const cambiarColor = document.getElementById("selectorColor");
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
 	formularioImagen.style.display = "none";
@@ -45,9 +47,7 @@ modoOscuro.onclick = () => {
 const cambio = () => {
 	const inputTexto = document.getElementById("inputTexto").value;
 	const imagen = document.getElementById("imagen");
-
-	imagen.removeAttribute("src");
-	imagen.setAttribute("src", inputTexto);
+	imagen.style.backgroundImage = `url(${inputTexto})`;
 };
 
 inputTexto.oninput = cambio;
@@ -75,20 +75,34 @@ filtroHue.onchange = cambioFiltro;
 filtroSaturado.onchange = cambioFiltro;
 filtroNegativo.onchange = cambioFiltro;
 
-
 // Funcion restablacer filtros
 
-reestablecerFiltros.onclick = () =>{
-	filtroBrillo.value = 1
-	filtroOpacidad.value = 1
-	filtroContraste.value = 100
-	filtroDesenfoque.value = 0
-	filtroEscalaDeGrises.value = 0
-	filtroSepia.value = 0
-	filtroHue.value = 0
-	filtroSaturado.value = 100
-	filtroNegativo.value = 0
+reestablecerFiltros.onclick = () => {
+	filtroBrillo.value = 1;
+	filtroOpacidad.value = 1;
+	filtroContraste.value = 100;
+	filtroDesenfoque.value = 0;
+	filtroEscalaDeGrises.value = 0;
+	filtroSepia.value = 0;
+	filtroHue.value = 0;
+	filtroSaturado.value = 100;
+	filtroNegativo.value = 0;
+	cajaImagenMeme.style.backgroundColor = "black";
+	cajaImagenMeme.style.backgroundBlendMode = "unset";
 
-	cambioFiltro()
-	return(false)
-}
+	cambioFiltro();
+	return false;
+};
+
+//Funcion selector de color
+cambiarColorImagen = (event) => {
+	cajaImagenMeme.style.backgroundColor = event.target.value;
+};
+cambiarColor.onchange = cambiarColorImagen;
+
+//Funcion cambiar color de fondo
+
+cambiarColorDeFondo = (event) => {
+	cajaImagenMeme.style.backgroundBlendMode = event.target.value;
+};
+colorDeFondo.onchange = cambiarColorDeFondo;

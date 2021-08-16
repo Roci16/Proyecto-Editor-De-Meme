@@ -65,7 +65,7 @@ button {
 	background-color: #044a42;
 }
 .caja-del-meme {
-	background-color: white;
+	background-color: black;
 	height: 85%;
 	width: 50%;
 }
@@ -87,6 +87,10 @@ button {
 }
 .caja-del-meme div .imagen {
 	width: 100%;
+}
+
+#imagen {
+	background-size: cover;
 }
 
 /* boton de descargar meme */

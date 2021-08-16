@@ -25,7 +25,7 @@
 			<nav class="nav-modo-claro">
 				<h1>Generador de memes</h1>
 				<div class="caja-botones">
-					<button  id="botonImagen" class="boton-nav">
+					<button id="botonImagen" class="boton-nav">
 						<i aria-hidden="true" class="far fa-file-image"></i>
 						Imagen
 					</button>
@@ -33,8 +33,12 @@
 						<i aria-hidden="true" class="fas fa-font"></i>
 						Texto
 					</button>
-					<button aria-label="Cambio a modo oscuro" id="modoOscuro" class="boton-nav">
-						<i  aria-hidden="true" class="far fa-lightbulb"></i>
+					<button
+						aria-label="Cambio a modo oscuro"
+						id="modoOscuro"
+						class="boton-nav"
+					>
+						<i aria-hidden="true" class="far fa-lightbulb"></i>
 						Modo oscuro
 					</button>
 				</div>
@@ -43,12 +47,7 @@
 				<!-- visualizador de imagen -->
 				<div class="caja-del-meme">
 					<p>TOP TEXT</p>
-					<div>
-						<img aria-label="Imagen de Meme"
-							id="imagen"
-							src="https://s3.us-west-2.amazonaws.com/s3.laprensa.com.ni-bq/wp-content/uploads/2020/06/WhatsApp-Image-2020-06-02-at-09.56.46-1000x600.jpeg"
-						/>
-					</div>
+					<div aria-label="Imagen de Meme" id="imagen"></div>
 					<p>BOTTOM TEXT</p>
 				</div>
 				<button id="meme-descarga">Descargar meme</button>
@@ -61,19 +60,33 @@
 				<h2>IMAGEN</h2>
 				<form>
 					<label for="url">URL</label>
-					<input aria-label="URL de la imagen" type="text" class="url" name="url" id="inputTexto" />
+					<input
+						aria-label="URL de la imagen"
+						type="text"
+						class="url"
+						name="url"
+						id="inputTexto"
+					/>
 
 					<!-- fondo -->
 					<div class="selector-de-colores">
 						<label for="selector-de-color">FONDO</label>
-						<input aria-label="Selector de color para el fondo de la imagen" type="color" name="selector-de-color" />
-						<select aria-label="Modo de mezcla del fondo de la imagen" id="selector-colores-fondo">
-							<option>Ninguno</option>
-							<option>Aclarar</option>
-							<option>Oscurecer</option>
-							<option>Diferencia</option>
-							<option>Luminosidad</option>
-							<option>Multiplicar</option>
+						<input
+							aria-label="Selector de color para el fondo de la imagen"
+							type="color"
+							name="selector-de-color"
+							id="selectorColor"
+						/>
+						<select
+							aria-label="Modo de mezcla del fondo de la imagen"
+							id="selectorColoresFondo"
+						>
+							<option value="unset">Ninguno</option>
+							<option value="lighten">Aclarar</option>
+							<option value="darken">Oscurecer</option>
+							<option value="difference">Diferencia</option>
+							<option value="luminosity">Luminosidad</option>
+							<option value="multiply">Multiplicar</option>
 						</select>
 					</div>
 
@@ -140,7 +153,9 @@
 						value="0"
 						step="0.1"
 					/>
-					<button id="botonRestablecer" class="restablece-filtro">Restablecer filtros</button>
+					<button id="botonRestablecer" class="restablece-filtro">
+						Restablecer filtros
+					</button>
 				</form>
 			</div>
 			<!-- Formulario Texto -->
@@ -149,7 +164,13 @@
 				<!-- Texto en imagen -->
 				<form>
 					<label for="superior">SUPERIOR</label>
-					<textarea aria-label="Texto superior" name="texto-superior" id="superior" cols="20" rows="1">
+					<textarea
+						aria-label="Texto superior"
+						name="texto-superior"
+						id="superior"
+						cols="20"
+						rows="1"
+					>
             TOP TEXT
           </textarea>
 					<input type="checkbox" name="quitar-texto-superior" id="checkbox" />
@@ -157,9 +178,13 @@
 
 					<label for="inferior">INFERIOR</label>
 
-
-
-					<textarea aria-label="Texto inferior" name="texto-superior" id="inferior" cols="20" rows="1">
+					<textarea
+						aria-label="Texto inferior"
+						name="texto-superior"
+						id="inferior"
+						cols="20"
+						rows="1"
+					>
           TOP BOTTOM
 
 
@@ -168,7 +193,10 @@
 					<label for="checkbox">Sin texto inferior</label>
 					<!-- Fuente -->
 					<label>FUENTE</label>
-					<select aria-label="Selector de fuentes para el texto" name="tipo-fuente">
+					<select
+						aria-label="Selector de fuentes para el texto"
+						name="tipo-fuente"
+					>
 						<option>Arial</option>
 						<option>Arial Black</option>
 						<option>American Typewriter</option>
@@ -180,15 +208,31 @@
 						<option>Times New Roman</option>
 					</select>
 					<input aria-label="Tamaño de la fuente" type="number" name="100" />
-					<button aria-label="Alineacion de texto al centro"><i aria-hidden="true" class="fas fa-align-center"></i></button>
-					<button aria-label="Alineacion de texto a la derecha"><i aria-hidden="true" class="fas fa-align-right"></i></button>
-					<button aria-label="Alineacion de texto a la izquierda"><i aria-hidden="true" class="fas fa-align-left"></i></button>
+					<button aria-label="Alineacion de texto al centro">
+						<i aria-hidden="true" class="fas fa-align-center"></i>
+					</button>
+					<button aria-label="Alineacion de texto a la derecha">
+						<i aria-hidden="true" class="fas fa-align-right"></i>
+					</button>
+					<button aria-label="Alineacion de texto a la izquierda">
+						<i aria-hidden="true" class="fas fa-align-left"></i>
+					</button>
 
 					<!-- Color de letra y fondo -->
 					<label for="color-letra">COLOR</label>
-					<input aria-label="Color de la letra" type="color" name="color-letra" id="color-letra" />
+					<input
+						aria-label="Color de la letra"
+						type="color"
+						name="color-letra"
+						id="color-letra"
+					/>
 					<label for="color-fondo">FONDO</label>
-					<input aria-label="Color de fondo del texto" type="color" name="color-fondo" id="color-fondo" />
+					<input
+						aria-label="Color de fondo del texto"
+						type="color"
+						name="color-fondo"
+						id="color-fondo"
+					/>
 					<label for="fondo-transparente">Fondo transparente</label>
 					<input
 						type="checkbox"
@@ -204,11 +248,21 @@
 
 					<!-- Espaciado -->
 					<label for="espaciado">ESPACIADO</label>
-					<input aria-label="Espaciado" type="number" name="espaciado" id="espaciado" />
+					<input
+						aria-label="Espaciado"
+						type="number"
+						name="espaciado"
+						id="espaciado"
+					/>
 
 					<!-- Interlineado -->
 					<label for="interlineado">INTERLINEADO</label>
-					<input aria-label="Interlineado" type="number" name="interlineado" id="interlineado" />
+					<input
+						aria-label="Interlineado"
+						type="number"
+						name="interlineado"
+						id="interlineado"
+					/>
 				</form>
 			</div>
 		</aside>
