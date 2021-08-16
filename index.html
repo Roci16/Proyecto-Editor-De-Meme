@@ -56,9 +56,9 @@
 			<main class="main-modo-claro">
 				<!-- visualizador de imagen -->
 				<div class="caja-del-meme" id="caja-del-meme">
-					<p id="top-text-p">TOP TEXT</p>
+					<p class="parrafo" id="top-text-p">TOP TEXT</p>
 					<div aria-label="Imagen de Meme" id="imagen"></div>
-					<p id="bottom-text-p">BOTTOM TEXT</p>
+					<p class="parrafo" id="bottom-text-p">BOTTOM TEXT</p>
 				</div>
 				<button id="meme-descarga">Descargar meme</button>
 			</main>
@@ -218,7 +218,13 @@
 						<option value="Verdana">Verdana</option>
 						<option value="Times New Roman">Times New Roman</option>
 					</select>
-					<input aria-label="Tamaño de la fuente" type="number" name="100" />
+					<input
+						aria-label="Tamaño de la fuente"
+						type="number"
+						id="tamanioFuente"
+						name="100"
+						value="35"
+					/>
 					<button aria-label="Alineacion de texto al centro">
 						<i aria-hidden="true" class="fas fa-align-center"></i>
 					</button>
