@@ -25,6 +25,7 @@ const bottomTextP = document.getElementById("bottom-text-p")
 const textAreaSuperior = document.getElementById("superior")
 const textAreaInferior = document.getElementById("inferior")
 const colorLetra = document.getElementById("color-letra")
+const colorFondo = document.getElementById("color-fondo")
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -126,4 +127,10 @@ textAreaInferior.oninput = () =>{
 colorLetra.oninput = () =>{
     topTextP.style.color = colorLetra.value
     bottomTextP.style.color = colorLetra.value
+}
+
+// funcion color fondo
+colorFondo.oninput = () =>{
+    topTextP.style.backgroundColor =colorFondo.value
+    bottomTextP.style.backgroundColor =colorFondo.value
 }
