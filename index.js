@@ -20,6 +20,11 @@ const filtroNegativo = document.getElementById("negativo");
 const reestablecerFiltros = document.getElementById("botonRestablecer");
 const colorDeFondo = document.getElementById("selectorColoresFondo");
 const cambiarColor = document.getElementById("selectorColor");
+const topTextP =document.getElementById ("top-text-p")
+const bottomTextP = document.getElementById("bottom-text-p")
+const textAreaSuperior = document.getElementById("superior")
+const textAreaInferior = document.getElementById("inferior")
+
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
 	formularioImagen.style.display = "none";
@@ -106,3 +111,11 @@ cambiarColorDeFondo = (event) => {
 	cajaImagenMeme.style.backgroundBlendMode = event.target.value;
 };
 colorDeFondo.onchange = cambiarColorDeFondo;
+
+// funciones cambiar p
+textAreaSuperior.oninput = () =>{
+    topTextP.textContent = textAreaSuperior.value
+}
+textAreaInferior.oninput = () =>{
+   bottomTextP.textContent = textAreaInferior.value
+}
