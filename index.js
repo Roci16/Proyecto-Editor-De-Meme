@@ -27,8 +27,8 @@ const textAreaInferior = document.getElementById("inferior");
 const colorLetra = document.getElementById("color-letra");
 const colorFondo = document.getElementById("color-fondo");
 const descargaMeme = document.getElementById("meme-descarga");
-const checkboxTransparente = document.getElementById("fondo-transparente")
-
+const checkboxTransparente = document.getElementById("fondo-transparente");
+const cambiarFuente = document.getElementById("selectorFuente");
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -151,11 +151,19 @@ descargaMeme.onclick = descargarMeme;
 
 // Funcion transparencia en texto
 
-const transparente = () =>{
-	topTextP.classList.toggle("top-transparencia")
-	bottomTextP.classList.toggle("bottom-transparencia")
+const transparente = () => {
+	topTextP.classList.toggle("top-transparencia");
+	bottomTextP.classList.toggle("bottom-transparencia");
 
-console.log(topTextP)
-console.log(bottomTextP)
-}
-checkboxTransparente.addEventListener("click", transparente)
+	console.log(topTextP);
+	console.log(bottomTextP);
+};
+checkboxTransparente.addEventListener("click", transparente);
+
+//Funcion cambiar fuente de texto
+
+cambiarTipoFuente = (event) => {
+	topTextP.style.fontFamily = event.target.value;
+	bottomTextP.style.fontFamily = event.target.value;
+};
+cambiarFuente.onchange = cambiarTipoFuente;
