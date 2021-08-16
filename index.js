@@ -36,6 +36,8 @@ const contornoOscuro = document.getElementById("contorno-oscuro");
 const alinearCentro = document.getElementById("alinear-centro");
 const alinearDerecha = document.getElementById("alinear-derecha");
 const alinearIzquierda = document.getElementById("alinear-izquierda");
+const checkboxSuperior = document.getElementById("checkbox-texto-superior");
+const checkboxInferior = document.getElementById("checkbox-texto-inferior");
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -166,6 +168,23 @@ const transparente = () => {
 	console.log(bottomTextP);
 };
 checkboxTransparente.addEventListener("click", transparente);
+
+// funcion desaparecer texto superior e inferior
+// display none p superior
+
+const textoSuperiorNone = () => {
+	topTextP.classList.toggle("top-none");
+};
+
+checkboxSuperior.addEventListener("click", textoSuperiorNone);
+
+// display none interior
+
+const textoInferiorNone = () => {
+	bottomTextP.classList.toggle("bottom-none");
+};
+
+checkboxInferior.addEventListener("click", textoInferiorNone);
 
 //Funcion cambiar fuente de texto
 
