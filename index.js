@@ -20,12 +20,13 @@ const filtroNegativo = document.getElementById("negativo");
 const reestablecerFiltros = document.getElementById("botonRestablecer");
 const colorDeFondo = document.getElementById("selectorColoresFondo");
 const cambiarColor = document.getElementById("selectorColor");
-const topTextP =document.getElementById ("top-text-p")
-const bottomTextP = document.getElementById("bottom-text-p")
-const textAreaSuperior = document.getElementById("superior")
-const textAreaInferior = document.getElementById("inferior")
-const colorLetra = document.getElementById("color-letra")
-const colorFondo = document.getElementById("color-fondo")
+const topTextP = document.getElementById("top-text-p");
+const bottomTextP = document.getElementById("bottom-text-p");
+const textAreaSuperior = document.getElementById("superior");
+const textAreaInferior = document.getElementById("inferior");
+const colorLetra = document.getElementById("color-letra");
+const colorFondo = document.getElementById("color-fondo");
+const descargaMeme = document.getElementById("meme-descarga");
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -115,22 +116,33 @@ cambiarColorDeFondo = (event) => {
 colorDeFondo.onchange = cambiarColorDeFondo;
 
 // funciones cambiar p
-textAreaSuperior.oninput = () =>{
-    topTextP.textContent = textAreaSuperior.value
-}
-textAreaInferior.oninput = () =>{
-   bottomTextP.textContent = textAreaInferior.value
-}
+textAreaSuperior.oninput = () => {
+	topTextP.textContent = textAreaSuperior.value;
+};
+textAreaInferior.oninput = () => {
+	bottomTextP.textContent = textAreaInferior.value;
+};
 
 // funcion color letra
 
-colorLetra.oninput = () =>{
-    topTextP.style.color = colorLetra.value
-    bottomTextP.style.color = colorLetra.value
-}
+colorLetra.oninput = () => {
+	topTextP.style.color = colorLetra.value;
+	bottomTextP.style.color = colorLetra.value;
+};
 
 // funcion color fondo
-colorFondo.oninput = () =>{
-    topTextP.style.backgroundColor =colorFondo.value
-    bottomTextP.style.backgroundColor =colorFondo.value
-}
+colorFondo.oninput = () => {
+	topTextP.style.backgroundColor = colorFondo.value;
+	bottomTextP.style.backgroundColor = colorFondo.value;
+};
+
+//Funcion descargar meme
+descargarMeme = () => {
+	domtoimage
+		.toBlob(document.getElementById("caja-del-meme"))
+		.then(function (blob) {
+			window.saveAs(blob, "meme-descargado.png");
+		});
+};
+
+descargaMeme.onclick = descargarMeme;
