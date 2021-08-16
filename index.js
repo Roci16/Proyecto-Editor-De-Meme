@@ -29,6 +29,8 @@ const colorFondo = document.getElementById("color-fondo");
 const descargaMeme = document.getElementById("meme-descarga");
 const checkboxTransparente = document.getElementById("fondo-transparente");
 const cambiarFuente = document.getElementById("selectorFuente");
+const checkboxSuperior = document.getElementById("checkbox-texto-superior")
+const checkboxInferior = document.getElementById("checkbox-texto-inferior")
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -167,3 +169,21 @@ cambiarTipoFuente = (event) => {
 	bottomTextP.style.fontFamily = event.target.value;
 };
 cambiarFuente.onchange = cambiarTipoFuente;
+
+
+//Funcion display none p superior
+
+const textoSuperiorNone = () =>{
+	topTextP.classList.toggle("top-none")
+}
+
+checkboxSuperior.addEventListener("click", textoSuperiorNone)
+
+//Funcion display none inferior
+
+const textoInferiorNone = () =>{
+	bottomTextP.classList.toggle("bottom-none")
+
+}
+
+checkboxInferior.addEventListener("click", textoInferiorNone)
