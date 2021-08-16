@@ -30,50 +30,53 @@ const descargaMeme = document.getElementById("meme-descarga");
 const checkboxTransparente = document.getElementById("fondo-transparente");
 const cambiarFuente = document.getElementById("selectorFuente");
 const tamañoFuente = document.getElementById("tamanioFuente");
-// Funcion boton texto-imagen
+const contornoNinguno = document.getElementById("contorno-ninguno")
+const contornoClaro = document.getElementById("contorno-claro")
+const contornoOscuro = document.getElementById("contorno-oscuro")
+    // Funcion boton texto-imagen
 botonTexto.onclick = () => {
-	formularioImagen.style.display = "none";
-	formularioTexto.style.display = "block";
+    formularioImagen.style.display = "none";
+    formularioTexto.style.display = "block";
 };
 
 botonImagen.onclick = () => {
-	formularioImagen.style.display = "block";
-	formularioTexto.style.display = "none";
+    formularioImagen.style.display = "block";
+    formularioTexto.style.display = "none";
 };
 
 //funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
-	navModoOscuro.classList.toggle("nav-modo-oscuro");
-	mainModoOscuro.classList.toggle("main-modo-oscuro");
-	asideModoOscuro.classList.toggle("aside-modo-oscuro");
-	// Recorro la colección HTML para hacer toggle de cada uno de los botones
-	for (let i = 0; i < botonesNavOscuro.length; i++) {
-		botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
-	}
+    navModoOscuro.classList.toggle("nav-modo-oscuro");
+    mainModoOscuro.classList.toggle("main-modo-oscuro");
+    asideModoOscuro.classList.toggle("aside-modo-oscuro");
+    // Recorro la colección HTML para hacer toggle de cada uno de los botones
+    for (let i = 0; i < botonesNavOscuro.length; i++) {
+        botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
+    }
 };
 
 // Funcion URL
 const cambio = () => {
-	const inputTexto = document.getElementById("inputTexto").value;
-	const imagen = document.getElementById("imagen");
-	imagen.style.backgroundImage = `url(${inputTexto})`;
+    const inputTexto = document.getElementById("inputTexto").value;
+    const imagen = document.getElementById("imagen");
+    imagen.style.backgroundImage = `url(${inputTexto})`;
 };
 
 inputTexto.oninput = cambio;
 
 //Funcion cambiar filtros
 const cambioFiltro = () => {
-	const brillo = filtroBrillo.value;
-	const opacidad = filtroOpacidad.value;
-	const contraste = filtroContraste.value;
-	const desenfoque = filtroDesenfoque.value;
-	const escala = filtroEscalaDeGrises.value;
-	const sepia = filtroSepia.value;
-	const hue = filtroHue.value;
-	const saturado = filtroSaturado.value;
-	const negativo = filtroNegativo.value;
-	cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
+    const brillo = filtroBrillo.value;
+    const opacidad = filtroOpacidad.value;
+    const contraste = filtroContraste.value;
+    const desenfoque = filtroDesenfoque.value;
+    const escala = filtroEscalaDeGrises.value;
+    const sepia = filtroSepia.value;
+    const hue = filtroHue.value;
+    const saturado = filtroSaturado.value;
+    const negativo = filtroNegativo.value;
+    cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
 };
 filtroBrillo.onchange = cambioFiltro;
 filtroOpacidad.onchange = cambioFiltro;
@@ -88,63 +91,63 @@ filtroNegativo.onchange = cambioFiltro;
 // Funcion restablacer filtros
 
 reestablecerFiltros.onclick = () => {
-	filtroBrillo.value = 1;
-	filtroOpacidad.value = 1;
-	filtroContraste.value = 100;
-	filtroDesenfoque.value = 0;
-	filtroEscalaDeGrises.value = 0;
-	filtroSepia.value = 0;
-	filtroHue.value = 0;
-	filtroSaturado.value = 100;
-	filtroNegativo.value = 0;
-	cajaImagenMeme.style.backgroundColor = "black";
-	cajaImagenMeme.style.backgroundBlendMode = "unset";
+    filtroBrillo.value = 1;
+    filtroOpacidad.value = 1;
+    filtroContraste.value = 100;
+    filtroDesenfoque.value = 0;
+    filtroEscalaDeGrises.value = 0;
+    filtroSepia.value = 0;
+    filtroHue.value = 0;
+    filtroSaturado.value = 100;
+    filtroNegativo.value = 0;
+    cajaImagenMeme.style.backgroundColor = "black";
+    cajaImagenMeme.style.backgroundBlendMode = "unset";
 
-	cambioFiltro();
-	return false;
+    cambioFiltro();
+    return false;
 };
 
 //Funcion selector de color
 cambiarColorImagen = (event) => {
-	cajaImagenMeme.style.backgroundColor = event.target.value;
+    cajaImagenMeme.style.backgroundColor = event.target.value;
 };
 cambiarColor.onchange = cambiarColorImagen;
 
 //Funcion cambiar color de fondo
 
 cambiarColorDeFondo = (event) => {
-	cajaImagenMeme.style.backgroundBlendMode = event.target.value;
+    cajaImagenMeme.style.backgroundBlendMode = event.target.value;
 };
 colorDeFondo.onchange = cambiarColorDeFondo;
 
 // funciones cambiar p
 textAreaSuperior.oninput = () => {
-	topTextP.textContent = textAreaSuperior.value;
+    topTextP.textContent = textAreaSuperior.value;
 };
 textAreaInferior.oninput = () => {
-	bottomTextP.textContent = textAreaInferior.value;
+    bottomTextP.textContent = textAreaInferior.value;
 };
 
 // funcion color letra
 
 colorLetra.oninput = () => {
-	topTextP.style.color = colorLetra.value;
-	bottomTextP.style.color = colorLetra.value;
+    topTextP.style.color = colorLetra.value;
+    bottomTextP.style.color = colorLetra.value;
 };
 
 // funcion color fondo
 colorFondo.oninput = () => {
-	topTextP.style.backgroundColor = colorFondo.value;
-	bottomTextP.style.backgroundColor = colorFondo.value;
+    topTextP.style.backgroundColor = colorFondo.value;
+    bottomTextP.style.backgroundColor = colorFondo.value;
 };
 
 //Funcion descargar meme
 descargarMeme = () => {
-	domtoimage
-		.toBlob(document.getElementById("caja-del-meme"))
-		.then(function (blob) {
-			window.saveAs(blob, "meme-descargado.png");
-		});
+    domtoimage
+        .toBlob(document.getElementById("caja-del-meme"))
+        .then(function(blob) {
+            window.saveAs(blob, "meme-descargado.png");
+        });
 };
 
 descargaMeme.onclick = descargarMeme;
@@ -152,26 +155,43 @@ descargaMeme.onclick = descargarMeme;
 // Funcion transparencia en texto
 
 const transparente = () => {
-	topTextP.classList.toggle("top-transparencia");
-	bottomTextP.classList.toggle("bottom-transparencia");
+    topTextP.classList.toggle("top-transparencia");
+    bottomTextP.classList.toggle("bottom-transparencia");
 
-	console.log(topTextP);
-	console.log(bottomTextP);
+    console.log(topTextP);
+    console.log(bottomTextP);
 };
 checkboxTransparente.addEventListener("click", transparente);
 
 //Funcion cambiar fuente de texto
 
 cambiarTipoFuente = (event) => {
-	topTextP.style.fontFamily = event.target.value;
-	bottomTextP.style.fontFamily = event.target.value;
+    topTextP.style.fontFamily = event.target.value;
+    bottomTextP.style.fontFamily = event.target.value;
 };
 cambiarFuente.onchange = cambiarTipoFuente;
 
 //funcion cambiar tamaño de fuente
 
 cambiarTamaño = (event) => {
-	topTextP.style.fontSize = `${event.target.value}px`;
-	bottomTextP.style.fontSize = `${event.target.value}px`;
+    topTextP.style.fontSize = `${event.target.value}px`;
+    bottomTextP.style.fontSize = `${event.target.value}px`;
 };
 tamañoFuente.onclick = cambiarTamaño;
+
+// Funcion contorno
+contornoNinguno.onclick = () => {
+    topTextP.style.webkitTextStroke = "0px transparent"
+    bottomTextP.style.webkitTextStroke = "0px transparent"
+    return false
+}
+contornoClaro.onclick = () => {
+    topTextP.style.webkitTextStroke = " 1.5px white"
+    bottomTextP.style.webkitTextStroke = "1px white"
+    return false
+}
+contornoOscuro.onclick = () => {
+    topTextP.style.webkitTextStroke = " 1.5px black"
+    bottomTextP.style.webkitTextStroke = "1px black"
+    return false
+}
