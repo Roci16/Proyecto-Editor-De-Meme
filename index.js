@@ -27,6 +27,8 @@ const textAreaInferior = document.getElementById("inferior");
 const colorLetra = document.getElementById("color-letra");
 const colorFondo = document.getElementById("color-fondo");
 const descargaMeme = document.getElementById("meme-descarga");
+const checkboxTransparente = document.getElementById("fondo-transparente")
+
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -146,3 +148,14 @@ descargarMeme = () => {
 };
 
 descargaMeme.onclick = descargarMeme;
+
+// Funcion transparencia en texto
+
+const transparente = () =>{
+	topTextP.classList.toggle("top-transparencia")
+	bottomTextP.classList.toggle("bottom-transparencia")
+
+console.log(topTextP)
+console.log(bottomTextP)
+}
+checkboxTransparente.addEventListener("click", transparente)
