@@ -29,7 +29,7 @@ const colorFondo = document.getElementById("color-fondo");
 const descargaMeme = document.getElementById("meme-descarga");
 const checkboxTransparente = document.getElementById("fondo-transparente");
 const cambiarFuente = document.getElementById("selectorFuente");
-
+const tamañoFuente = document.getElementById("tamanioFuente");
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
 	formularioImagen.style.display = "none";
@@ -167,3 +167,11 @@ cambiarTipoFuente = (event) => {
 	bottomTextP.style.fontFamily = event.target.value;
 };
 cambiarFuente.onchange = cambiarTipoFuente;
+
+//funcion cambiar tamaño de fuente
+
+cambiarTamaño = (event) => {
+	topTextP.style.fontSize = `${event.target.value}px`;
+	bottomTextP.style.fontSize = `${event.target.value}px`;
+};
+tamañoFuente.onclick = cambiarTamaño;
