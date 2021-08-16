@@ -92,6 +92,10 @@ button {
 #imagen {
 	background-size: cover;
 }
+.top-transparencia,
+.bottom-transparencia{
+	background-color: transparent !important;
+}
 
 /* boton de descargar meme */
 
