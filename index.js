@@ -102,6 +102,7 @@ const cambio = () => {
     const inputTexto = document.getElementById("inputTexto").value;
     const imagen = document.getElementById("imagen");
     imagen.style.backgroundImage = `url(${inputTexto})`;
+    return false
 };
 
 inputTexto.oninput = cambio;
