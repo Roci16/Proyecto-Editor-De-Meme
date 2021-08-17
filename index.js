@@ -1,13 +1,30 @@
+// ***************************//
+// ***SECCION NAV SUPERIOR***//
+// *************************//
+
 const botonImagen = document.getElementById("botonImagen");
 const botonTexto = document.getElementById("botonTexto");
-const formularioImagen = document.getElementById("formularioImagen");
-const formularioTexto = document.getElementById("formularioTexto");
 const modoOscuro = document.querySelector("#modoOscuro");
 const navModoOscuro = document.querySelector("nav");
 const mainModoOscuro = document.querySelector("main");
 const asideModoOscuro = document.querySelector("aside");
 const botonesNavOscuro = document.getElementsByClassName("boton-nav");
+
+// *******************//
+// ***SECCION MAIN***//
+// *****************//
+
 const cajaImagenMeme = document.getElementById("imagen");
+const topTextP = document.getElementById("top-text-p");
+const bottomTextP = document.getElementById("bottom-text-p");
+const descargaMeme = document.getElementById("meme-descarga");
+
+// **************************//
+// ***SECCION FORMULARIOS***//
+// ************************//
+
+const formularioImagen = document.getElementById("formularioImagen");
+const formularioTexto = document.getElementById("formularioTexto");
 const filtroBrillo = document.getElementById("brillo");
 const filtroOpacidad = document.getElementById("opacidad");
 const filtroContraste = document.getElementById("contraste");
@@ -20,13 +37,10 @@ const filtroNegativo = document.getElementById("negativo");
 const reestablecerFiltros = document.getElementById("botonRestablecer");
 const colorDeFondo = document.getElementById("selectorColoresFondo");
 const cambiarColor = document.getElementById("selectorColor");
-const topTextP = document.getElementById("top-text-p");
-const bottomTextP = document.getElementById("bottom-text-p");
 const textAreaSuperior = document.getElementById("superior");
 const textAreaInferior = document.getElementById("inferior");
 const colorLetra = document.getElementById("color-letra");
 const colorFondo = document.getElementById("color-fondo");
-const descargaMeme = document.getElementById("meme-descarga");
 const checkboxTransparente = document.getElementById("fondo-transparente");
 const cambiarFuente = document.getElementById("selectorFuente");
 const tamañoFuente = document.getElementById("tamanioFuente");
@@ -41,6 +55,10 @@ const checkboxInferior = document.getElementById("checkbox-texto-inferior");
 const espaciado = document.getElementById("espaciado")
 const interlineado = document.getElementById("interlineado")
 
+// *****************************//
+// ***FUNCIONES NAV SUPERIOR***//
+// ***************************//
+
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
     formularioImagen.style.display = "none";
@@ -52,7 +70,7 @@ botonImagen.onclick = () => {
     formularioTexto.style.display = "none";
 };
 
-//funcion modo claro, modo oscuro
+//Funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
     navModoOscuro.classList.toggle("nav-modo-oscuro");
@@ -63,6 +81,21 @@ modoOscuro.onclick = () => {
         botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
     }
 };
+
+//Funcion descargar meme
+descargarMeme = () => {
+    domtoimage
+        .toBlob(document.getElementById("caja-del-meme"))
+        .then(function(blob) {
+            window.saveAs(blob, "meme-descargado.png");
+        });
+};
+
+descargaMeme.onclick = descargarMeme;
+
+// ******************************//
+// ***FUNCIONES DE FORMULARIO***//
+// ****************************//
 
 // Funcion URL
 const cambio = () => {
@@ -128,7 +161,7 @@ cambiarColorDeFondo = (event) => {
 };
 colorDeFondo.onchange = cambiarColorDeFondo;
 
-// funciones cambiar p
+// Funciones cambiar texto
 textAreaSuperior.oninput = () => {
     topTextP.textContent = textAreaSuperior.value;
 };
@@ -136,29 +169,19 @@ textAreaInferior.oninput = () => {
     bottomTextP.textContent = textAreaInferior.value;
 };
 
-// funcion color letra
+// Funcion color letra
 
 colorLetra.oninput = () => {
     topTextP.style.color = colorLetra.value;
     bottomTextP.style.color = colorLetra.value;
 };
 
-// funcion color fondo
+// Funcion color fondo
 colorFondo.oninput = () => {
     topTextP.style.backgroundColor = colorFondo.value;
     bottomTextP.style.backgroundColor = colorFondo.value;
 };
 
-//Funcion descargar meme
-descargarMeme = () => {
-    domtoimage
-        .toBlob(document.getElementById("caja-del-meme"))
-        .then(function(blob) {
-            window.saveAs(blob, "meme-descargado.png");
-        });
-};
-
-descargaMeme.onclick = descargarMeme;
 
 // Funcion transparencia en texto
 
