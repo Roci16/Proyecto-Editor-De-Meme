@@ -39,6 +39,7 @@ const alinearIzquierda = document.getElementById("alinear-izquierda");
 const checkboxSuperior = document.getElementById("checkbox-texto-superior");
 const checkboxInferior = document.getElementById("checkbox-texto-inferior");
 const espaciado = document.getElementById("espaciado")
+const interlineado = document.getElementById("interlineado")
 
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
@@ -239,3 +240,12 @@ cambiarEspaciado = (event) => {
     bottomTextP.style.paddingBottom = `${event.target.value}px`
 }
 espaciado.onchange = cambiarEspaciado
+
+
+//Funcion interlineado 
+
+cambiarInterlineado = (event) => {
+    topTextP.style.lineHeight = event.target.value;
+    bottomTextP.style.lineHeight = event.target.value;
+}
+interlineado.onchange = cambiarInterlineado
