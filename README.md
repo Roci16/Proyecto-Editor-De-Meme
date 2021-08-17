@@ -1,9 +1,9 @@
-# Editor de memes :fa-heart:
+# Editor de memes :heart:
 
 
 Este es un proyecto que llevamos a cabo a partir del aprendizaje del segundo módulo de programación Front-end en AdaItw.
 
-##   :fa-wrench: Construido con:
+##   :wrench: Construido con:
 
 - **JavaScript**
 
@@ -11,32 +11,32 @@ Este es un proyecto que llevamos a cabo a partir del aprendizaje del segundo mó
 
 - **CSS**
 
-##:fa-pencil-square-o: Información sobre el proyecto
+##:open_file_folder: Información sobre el proyecto
 
-- :fa-key: Accesibilidad
+- :key: Accesibilidad
 
-- :fa-moon-o: Modo oscuro
+- :crescent_moon: Modo oscuro
 
-- :fa-sun-o: Modo claro
+- :sunny: Modo claro
 
-- :fa-paint-brush: Edición de imagen con filtros
+- :pencil2: Edición de imagen con filtros
 
-- :fa-align-center: Editor de texto
+- :pencil: Editor de texto
 
-- :fa-cloud-download: Descarga de imagen editada
+- :floppy_disk: Descarga de imagen editada
 
 
 
 ##:fa-star: Autores :
 
-- :fa-github-alt: [Victoria Diaz](https://github.com/diazvic)
+- :octocat: [Victoria Diaz](https://github.com/diazvic)
 
-- :fa-github-alt:  [Rocio Ibañez](https://github.com/Roci16)
+- :octocat:  [Rocio Ibañez](https://github.com/Roci16)
 
-### :fa-globe: Link a el sitio web
+### :earth_americas: Link a el sitio web
 
--  [Ir al proyecto :fa-smile-o:](https://roci16.github.io/Proyecto-Editor-De-Meme/)
+-  [Ir al proyecto :grin:](https://roci16.github.io/Proyecto-Editor-De-Meme/)
 
 
 
-**Relizado con ** :tw-1f49c: **Roci y Vicky**  :tw-1f46d:
+**Relizado con ** :heart: **Roci y Vicky**  :two_women_holding_hands:
