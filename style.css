@@ -108,10 +108,10 @@ button {
 }
 
 #imagen {
+    display: block;
+    flex-grow: 1;
     background-size: cover;
     height: 70%;
-    flex-grow: 1;
-    display: block;
 }
 
 .top-none,
@@ -130,8 +130,8 @@ button {
 #meme-descarga {
     margin-top: 10px;
     background-color: #1b5e20;
-    border: 1px solid rgba(32, 148, 32, 0.659);
     color: white;
+    border: 1px solid rgba(32, 148, 32, 0.659);
     width: 160px;
     height: 35px;
 }
@@ -152,7 +152,6 @@ button {
     justify-content: center;
     background-color: #e4efe7;
     width: 20%;
-    /* height: 100%; */
 }
 
 .aside-modo-oscuro {
