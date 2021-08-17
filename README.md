@@ -27,7 +27,7 @@ Este es un proyecto que llevamos a cabo a partir del aprendizaje del segundo mó
 
 
 
-##:fa-star: Autores :
+##:star2: Autores :
 
 - :octocat: [Victoria Diaz](https://github.com/diazvic)
 
@@ -35,8 +35,8 @@ Este es un proyecto que llevamos a cabo a partir del aprendizaje del segundo mó
 
 ### :earth_americas: Link a el sitio web
 
--  [Ir al proyecto :grin:](https://roci16.github.io/Proyecto-Editor-De-Meme/)
+-  [Link al sitio web :grin:](https://roci16.github.io/Proyecto-Editor-De-Meme/)
 
 
 
-**Relizado con :heart: Roci y Vicky**  :two_women_holding_hands:
+**Realizado con :heart:  Roci y Vicky**  :two_women_holding_hands:
