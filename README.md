@@ -39,4 +39,4 @@ Este es un proyecto que llevamos a cabo a partir del aprendizaje del segundo mó
 
 
 
-**Relizado con ** :heart: **Roci y Vicky**  :two_women_holding_hands:
+**Relizado con :heart: Roci y Vicky**  :two_women_holding_hands:
