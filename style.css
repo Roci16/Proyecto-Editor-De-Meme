@@ -18,7 +18,7 @@ button {
 }
 
 
-/* Comienzo de nav superior */
+/***COMIENZO DE NAV SUPERIOR***/
 
 .nav-modo-claro {
     display: flex;
@@ -55,10 +55,10 @@ button {
 }
 
 
-/* Final de nav superior */
+/***FINAL DE NAV SUPERRIOR***/
 
 
-/* Comienzo del main */
+/***COMIENZO DEL MAIN***/
 
 .main-modo-claro {
     display: flex;
@@ -81,18 +81,6 @@ button {
     display: flex;
     flex-direction: column;
 }
-
-
-/* .caja-del-meme p {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: Roboto;
-	font-size: 35px;
-	font-weight: bold;
-	height: 15%;
-	background-color: white;
-} */
 
 .parrafo {
     display: flex;
@@ -153,10 +141,10 @@ button {
 }
 
 
-/* final del boton descargar memme */
+/*** FINAL DEL MAIN ***/
 
 
-/* Final del main */
+/***COMIENZO SECCION FORMULARIOS***/
 
 .aside-modo-claro {
     display: flex;
@@ -174,13 +162,6 @@ button {
 
 
 /* Comienzo del formulario imagen */
-
-
-/* .formulario-imagen {
-	padding: 25px;
-	display: flex;
-	flex-direction: column;
-} */
 
 form {
     display: flex;
@@ -245,4 +226,4 @@ h2 {
 }
 
 
-/* Final formulario texto */
+/***FINAL DE SECCION FORMULARIOS***/
