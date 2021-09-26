@@ -102,6 +102,7 @@ const cambio = () => {
     const inputTexto = document.getElementById("inputTexto").value;
     const imagen = document.getElementById("imagen");
     imagen.style.backgroundImage = `url(${inputTexto})`;
+    // no es necesario retornar en funciones que no devuelven valores
     return false
 };
 
@@ -118,6 +119,13 @@ const cambioFiltro = () => {
     const hue = filtroHue.value;
     const saturado = filtroSaturado.value;
     const negativo = filtroNegativo.value;
+    // cuando es muy largo, dejen saltos de linea asi el lector no debe 
+    // hacer un scroll horizontal
+    // cajaImagenMeme.style.filter = `
+    //     brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) 
+    //     blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) 
+    //     hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})
+    //     `;
     cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
 };
 filtroBrillo.onchange = cambioFiltro;
@@ -146,6 +154,7 @@ reestablecerFiltros.onclick = () => {
     cajaImagenMeme.style.backgroundBlendMode = "unset";
 
     cambioFiltro();
+    // innecesario
     return false;
 };
 
@@ -189,7 +198,7 @@ colorFondo.oninput = () => {
 const transparente = () => {
     topTextP.classList.toggle("top-transparencia");
     bottomTextP.classList.toggle("bottom-transparencia");
-
+// no dejen console log en entregas
     console.log(topTextP);
     console.log(bottomTextP);
 };
@@ -247,6 +256,8 @@ contornoOscuro.onclick = () => {
 //Funcion alinear texto
 cambiarAlineacion = (event) => {
     event.preventDefault();
+    // innecesaria la interpolacion aca , es lo mismo esto:
+    // topTextP.style.justifyContent = event.target.value
     topTextP.style.justifyContent = `${event.target.value}`;
     bottomTextP.style.justifyContent = `${event.target.value}`;
 };

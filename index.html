@@ -22,6 +22,8 @@
         <nav class="nav-modo-claro">
             <h1>Generador de memes</h1>
             <div class="caja-botones">
+                <!-- tanto los ids como las clases siempre se separan con-guiones en HTML.
+                Reservamos camelCase para javascript -->
                 <button id="botonImagen" class="boton-nav">
 						<i aria-hidden="true" class="far fa-file-image"></i>
 						Imagen
@@ -39,6 +41,8 @@
         <main class="main-modo-claro">
             <!-- visualizador de imagen -->
             <div class="caja-del-meme" id="caja-del-meme">
+                <!-- Las etiquetas de html no son buenos descriptores en sentido funcional, 
+                y no deben formar parte ni de las clases, ni de los ids.  -->
                 <p class="parrafo" id="top-text-p">TEXTO SUPERIOR</p>
                 <div aria-label="Imagen de Meme" id="imagen"></div>
                 <p class="parrafo" id="bottom-text-p">TEXTO INFERIOR</p>
@@ -57,9 +61,11 @@
 
                 <!-- fondo -->
                 <div class="selector-de-colores">
+                    <!-- no hay ningun elemento que tenga el id selector-de-color, asi que este label for no hace nada -->
                     <label for="selector-de-color">FONDO</label>
                     <input aria-label="Selector de color para el fondo de la imagen" type="color" name="selector-de-color" id="selectorColor" />
                     <select aria-label="Modo de mezcla del fondo de la imagen" id="selectorColoresFondo">
+                        <!-- Aca en el tabulado hay el doble de espacio del necesario -->
 							<option value="unset">Ninguno</option>
 							<option value="lighten">Aclarar</option>
 							<option value="darken">Oscurecer</option>
@@ -71,6 +77,7 @@
 
                 <!-- filtros -->
                 <label class="titulo-filtros">FILTROS</label>
+                <!-- estos label no rodean al input ni tienen label for asi que no suman nada en terminos de accesibilidad -->
                 <label for="brillo">BRILLO</label>
                 <input type="range" id="brillo" min="0" max="1" value="1" step="0.1" />
 
