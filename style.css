@@ -9,6 +9,7 @@ body {
     height: 100%;
 }
 
+/* La tipografia se hereda, asi que es mejor darsela al body que a cada elemento en particular */
 p,
 h1,
 h2,
@@ -86,12 +87,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Ya le dieron font family a todos los p  */
     font-family: Roboto;
     font-size: 35px;
     font-weight: bold;
     width: 100%;
     background-color: white;
     padding: 15px 0px 15px 0px;
+    /* agreguen un z-index para que la imagen no tape este elemento */
     position: absolute;
 }
 
@@ -114,6 +117,8 @@ button {
     height: 70%;
 }
 
+/* Por que dos nombres de clase distintos para la misma orden??? Recuerden que las clases
+son, y deben ser, reutilizables */
 .top-none,
 .bottom-none {
     display: none !important;
