@@ -20,7 +20,7 @@
 
 <body>
     <!-- barra de navegacion superior -->
-    <nav>
+    <nav class="nav-modo-claro ">
         <div id="menu-bars">
             <i class="fas fa-bars"></i>
         </div>
@@ -63,8 +63,9 @@
         <div class="formulario-imagen" id="formularioImagen">
             <h2>IMAGEN</h2>
             <form>
-                <label for="url">URL</label>
-                <input aria-label="URL de la imagen" type="text" class="url" name="url" id="inputTexto" />
+                <label id="url" for="url">URL
+                    <input aria-label="URL de la imagen" type="text" class="url" name="url" id="inputTexto" />
+                </label>
 
                 <!-- fondo -->
                 <div class="selector-de-colores">
@@ -127,7 +128,7 @@
         <div id="formularioTexto">
             <h2>TEXTO</h2>
             <!-- Texto en imagen -->
-            <form>
+            <form id="texto-aside">
                 <label for="superior">SUPERIOR
                      <textarea aria-label="Texto superior" name="texto-superior" id="superior" cols="20" rows="1">
                          TEXTO SUPERIOR

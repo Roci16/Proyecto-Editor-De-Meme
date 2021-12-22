@@ -86,7 +86,6 @@ botonTexto.onclick = () => {
     formularioImagen.style.display = "none";
     formularioTexto.style.display = "block";
     asideModoOscuro.style.display = "block"
-    asideModoOscuro.style.width = "100%"
     responsive()
 };
 
@@ -105,6 +104,7 @@ const responsive = () => {
         menuBars.style.display = "block"
         menuTimes.style.display = "block"
     } else {
+        asideModoOscuro.style.display = "block"
         asideModoOscuro.style.width = "20%"
         menuBars.style.display = "none"
         menuTimes.style.display = "none"
@@ -118,8 +118,8 @@ modoOscuro.onclick = () => {
     navModoOscuro.classList.toggle("nav-modo-oscuro");
     mainModoOscuro.classList.toggle("main-modo-oscuro");
     asideModoOscuro.classList.toggle("aside-modo-oscuro");
-    asideModoOscuro.style.display = "none"
-        // Recorro la colección HTML para hacer toggle de cada uno de los botones
+
+    // Recorro la colección HTML para hacer toggle de cada uno de los botones
     for (let i = 0; i < botonesNavOscuro.length; i++) {
         botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
     }

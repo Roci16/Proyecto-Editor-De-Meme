@@ -71,7 +71,7 @@ button {
     justify-content: center;
     align-items: center;
     background-color: #ececec;
-    height: 90vh;
+    height: 87vh;
 }
 
 .main-modo-oscuro {
@@ -97,7 +97,6 @@ button {
     width: 100%;
     background-color: white;
     padding: 15px 0px 15px 0px;
-    /* position: absolute; */
 }
 
 .caja-del-meme div .imagen {
@@ -155,7 +154,6 @@ button {
 .aside-modo-claro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: #ebead4c2;
     width: 20%;
     height: 100%;
@@ -163,6 +161,10 @@ button {
     top: 1px;
     right: 1px;
     z-index: 2;
+}
+
+h2 {
+    padding: 50px 0;
 }
 
 .aside-modo-oscuro {
@@ -177,14 +179,39 @@ button {
 
 /* Comienzo del formulario imagen */
 
-form {
+#formularioTexto,
+#formularioImagen {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#texto-aside {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
 }
 
-label {
+input[type=range] {
+    width: 100%;
+}
+
+#url {
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type=text] {
+    width: 90%;
+}
+
+#formularioImagen label {
     margin: 2% 0% 2% 0%;
     font-size: 14px;
+}
+
+#formularioTexto label {
+    margin: 5px;
 }
 
 h2 {
@@ -211,6 +238,7 @@ h2 {
     height: 40px;
     border: none;
     border-radius: 5px;
+    background-color: #cacaca;
 }
 
 .restablece-filtro:hover {
@@ -222,6 +250,10 @@ h2 {
     border: none;
     border-radius: 5px;
     height: 30px;
+}
+
+textarea {
+    width: 100%;
 }
 
 .url:hover {
@@ -245,6 +277,7 @@ h2 {
 @media (max-width: 1024px) {
     .aside-modo-claro {
         display: none;
+        height: auto;
     }
     #menu-bars {
         display: block;
@@ -274,6 +307,9 @@ h2 {
 }
 
 @media (max-width: 325px) {
+    h1 {
+        font-size: 25px;
+    }
     .parrafo {
         font-size: 10px;
     }
