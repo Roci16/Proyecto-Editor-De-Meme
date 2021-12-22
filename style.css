@@ -1,12 +1,7 @@
-body {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-}
+body {}
 
 .caja-general {
-    width: 85%;
-    height: 100%;
+    height: auto;
 }
 
 p,
@@ -20,16 +15,24 @@ button {
 
 /***COMIENZO DE NAV SUPERIOR***/
 
-.nav-modo-claro {
+.menu-bars {
+    display: none;
+}
+
+.sin-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.nav-modo-claro {
     color: #424242;
     background-color: #faf1e6;
     font-family: Roboto;
     font-size: 35px;
     height: 15%;
+    padding-top: 20px;
 }
 
 .nav-modo-oscuro {
@@ -66,7 +69,7 @@ button {
     justify-content: center;
     align-items: center;
     background-color: #f4dfd0;
-    height: 85%;
+    height: 90vh;
 }
 
 .main-modo-oscuro {
@@ -92,7 +95,7 @@ button {
     width: 100%;
     background-color: white;
     padding: 15px 0px 15px 0px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .caja-del-meme div .imagen {
@@ -153,6 +156,10 @@ button {
     justify-content: center;
     background-color: #e4efe7;
     width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 1px;
+    right: 1px;
 }
 
 .aside-modo-oscuro {
