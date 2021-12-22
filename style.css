@@ -1,5 +1,3 @@
-body {}
-
 .caja-general {
     height: auto;
 }
@@ -12,10 +10,15 @@ button {
     font-family: Roboto;
 }
 
+.fa-bars,
+.fa-times {
+    font-size: 25px;
+}
+
 
 /***COMIENZO DE NAV SUPERIOR***/
 
-.menu-bars {
+#menu-bars {
     display: none;
 }
 
@@ -23,7 +26,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    padding-top: 25px;
 }
 
 .nav-modo-claro {
@@ -32,12 +35,11 @@ button {
     font-family: Roboto;
     font-size: 35px;
     height: 15%;
-    padding-top: 20px;
 }
 
 .nav-modo-oscuro {
     color: #ffffff;
-    background-color: #062925;
+    background-color: #2c2c35;
 }
 
 .boton-nav {
@@ -68,12 +70,12 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f4dfd0;
+    background-color: #ececec;
     height: 90vh;
 }
 
 .main-modo-oscuro {
-    background-color: #044a42;
+    background-color: #21212c;
 }
 
 .caja-del-meme {
@@ -152,19 +154,24 @@ button {
 
 .aside-modo-claro {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: #e4efe7;
+    background-color: #ebead4c2;
     width: 20%;
     height: 100%;
     position: absolute;
     top: 1px;
     right: 1px;
+    z-index: 2;
 }
 
 .aside-modo-oscuro {
-    background-color: #3a9188;
+    background-color: #6e66837e;
     color: #ffffff;
+}
+
+#menu-times {
+    display: none;
 }
 
 
@@ -234,3 +241,55 @@ h2 {
 
 
 /***FINAL DE SECCION FORMULARIOS***/
+
+@media (max-width: 1024px) {
+    .aside-modo-claro {
+        display: none;
+    }
+    #menu-bars {
+        display: block;
+    }
+    #menu-times {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .aside-modo-claro {
+        display: flex;
+        width: 20%;
+    }
+    #menu-bars {
+        display: none;
+    }
+    #menu-times {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .parrafo {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 325px) {
+    .parrafo {
+        font-size: 10px;
+    }
+    .boton-nav {
+        width: 50px;
+    }
+    .caja-botones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 200px) and (min-width: 767px) {
+    .caja-del-meme {
+        height: 60%;
+        width: 65%;
+    }
+}

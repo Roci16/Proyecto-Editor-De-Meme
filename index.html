@@ -20,25 +20,28 @@
 
 <body>
     <!-- barra de navegacion superior -->
-    <div class="sin-menu">
-        <h1>Generador de memes</h1>
-        <div class="caja-botones">
-            <button id="botonImagen" class="boton-nav">
+    <nav>
+        <div id="menu-bars">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="sin-menu">
+            <h1>Generador de memes</h1>
+            <div class="caja-botones">
+                <button id="botonImagen" class="boton-nav">
                             <i aria-hidden="true" class="far fa-file-image"></i>
                             Imagen
                         </button>
-            <button id="botonTexto" class="boton-nav">
+                <button id="botonTexto" class="boton-nav">
                             <i aria-hidden="true" class="fas fa-font"></i>
                             Texto
                         </button>
-            <button aria-label="Cambio a modo oscuro" id="modoOscuro" class="boton-nav">
-                            <i aria-hidden="true" class="far fa-lightbulb"></i>
-                            Modo oscuro
-                        </button>
+                <button aria-label="Cambio a modo oscuro" id="modoOscuro" class="boton-nav ">
+                            <i aria-hidden="true" class="far fa-moon"></i>
+                            Modo Oscuro
+                </button>
 
+            </div>
         </div>
-    </div>
-
     </nav>
     <main class="main-modo-claro">
         <!-- visualizador de imagen -->
@@ -53,6 +56,9 @@
     <!-- Aside formularios -->
 
     <aside class="aside-modo-claro">
+        <div id="menu-times">
+            <i class="fas fa-times"></i>
+        </div>
         <!--Formulario Imagen  -->
         <div class="formulario-imagen" id="formularioImagen">
             <h2>IMAGEN</h2>
