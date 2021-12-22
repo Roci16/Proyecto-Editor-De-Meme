@@ -9,6 +9,8 @@ const navModoOscuro = document.querySelector("nav");
 const mainModoOscuro = document.querySelector("main");
 const asideModoOscuro = document.querySelector("aside");
 const botonesNavOscuro = document.getElementsByClassName("boton-nav");
+const menuBars = document.getElementById("menu-bars")
+const navSinMenu = document.querySelector(".sin-menu")
 
 // *******************//
 // ***SECCION MAIN***//
@@ -23,6 +25,7 @@ const descargaMeme = document.getElementById("meme-descarga");
 // ***SECCION FORMULARIOS***//
 // ************************//
 
+const menuTimes = document.getElementById("menu-times")
 const formularioImagen = document.getElementById("formularioImagen");
 const formularioTexto = document.getElementById("formularioTexto");
 const filtroBrillo = document.getElementById("brillo");
@@ -59,28 +62,68 @@ const interlineado = document.getElementById("interlineado")
 // ***FUNCIONES NAV SUPERIOR***//
 // ***************************//
 
+
+//Menu bars
+menuBars.onclick = () => {
+
+    asideModoOscuro.style.display = "block"
+    asideModoOscuro.style.width = "100%"
+    mainModoOscuro.style.display = "none"
+    navSinMenu.style.display = "none"
+    menuBars.style.display = "none"
+}
+
+menuTimes.onclick = () => {
+    asideModoOscuro.style.display = "none"
+    mainModoOscuro.style.display = "flex"
+    navSinMenu.style.display = "flex"
+    menuBars.style.display = "flex"
+
+}
+
 // Funcion boton texto-imagen
 botonTexto.onclick = () => {
     formularioImagen.style.display = "none";
     formularioTexto.style.display = "block";
+    asideModoOscuro.style.display = "block"
+    responsive()
 };
 
 botonImagen.onclick = () => {
     formularioImagen.style.display = "block";
     formularioTexto.style.display = "none";
+    asideModoOscuro.style.display = "block"
+    responsive()
+
 };
+
+const responsive = () => {
+    if (screen.width < 1024) {
+        asideModoOscuro.style.display = "none"
+        asideModoOscuro.style.width = "100%"
+        menuBars.style.display = "block"
+        menuTimes.style.display = "block"
+    } else {
+        asideModoOscuro.style.display = "block"
+        asideModoOscuro.style.width = "20%"
+        menuBars.style.display = "none"
+        menuTimes.style.display = "none"
+    }
+}
 
 //Funcion modo claro, modo oscuro
 
 modoOscuro.onclick = () => {
+
     navModoOscuro.classList.toggle("nav-modo-oscuro");
     mainModoOscuro.classList.toggle("main-modo-oscuro");
     asideModoOscuro.classList.toggle("aside-modo-oscuro");
+
     // Recorro la colección HTML para hacer toggle de cada uno de los botones
     for (let i = 0; i < botonesNavOscuro.length; i++) {
         botonesNavOscuro[i].classList.toggle("boton-nav-oscuro");
     }
-};
+}
 
 //Funcion descargar meme
 descargarMeme = () => {
