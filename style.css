@@ -93,7 +93,6 @@ button {
     background-color: white;
     padding: 15px 0px 15px 0px;
     position: absolute;
-    z-index: 1;
 }
 
 .caja-del-meme div .imagen {
@@ -102,6 +101,7 @@ button {
 
 #top-text-p {
     top: 0;
+    z-index: 1;
 }
 
 #bottom-text-p {
