@@ -58,8 +58,9 @@
 
                 <!-- fondo -->
                 <div class="selector-de-colores">
-                    <label for="selector-de-color">FONDO</label>
+                    <label for="selector-de-color">FONDO
                     <input aria-label="Selector de color para el fondo de la imagen" type="color" name="selector-de-color" id="selectorColor" />
+                </label>
                     <select aria-label="Modo de mezcla del fondo de la imagen" id="selectorColoresFondo">
 							<option value="unset">Ninguno</option>
 							<option value="lighten">Aclarar</option>
@@ -72,32 +73,41 @@
 
                 <!-- filtros -->
                 <label class="titulo-filtros">FILTROS</label>
-                <label for="brillo">BRILLO</label>
+                <label for="brillo">BRILLO
                 <input type="range" id="brillo" min="0" max="1" value="1" step="0.1" />
+                </label>
 
-                <label for="opacidad">OPACIDAD</label>
+                <label for="opacidad">OPACIDAD
                 <input type="range" id="opacidad" min="0" max="1" value="1" step="0.1" />
+                </label>
 
-                <label for="contraste">CONTRASTE</label>
+                <label for="contraste">CONTRASTE
                 <input type="range" id="contraste" min="100" max="1000" value="100" />
+                </label>
 
-                <label for="desenfoque">DESENFOQUE</label>
+                <label for="desenfoque">DESENFOQUE
                 <input type="range" id="desenfoque" min="0" max="10" value="0" step="0.1" />
+                </label>
 
-                <label for="escala-grises">ESCALA DE GRISES</label>
+                <label for="escala-grises">ESCALA DE GRISES
                 <input type="range" id="escala-grises" min="0" max="100" value="0" />
+                </label>
 
-                <label for="sepia">SEPIA</label>
+                <label for="sepia">SEPIA
                 <input type="range" id="sepia" min="0" max="100" value="0" />
+                </label>
 
-                <label for="hue">HUE</label>
+                <label for="hue">HUE
                 <input type="range" id="hue" min="0" max="360" value="0" />
+                </label>
 
-                <label for="saturado">SATURADO</label>
+                <label for="saturado">SATURADO
                 <input type="range" id="saturado" min="100" max="1000" value="100" step="10" />
+                </label>
 
-                <label for="negativo">NEGATIVO</label>
+                <label for="negativo">NEGATIVO
                 <input type="range" id="negativo" min="0" max="1" value="0" step="0.1" />
+                </label>
                 <button id="botonRestablecer" class="restablece-filtro">
 						Restablecer filtros
 					</button>
@@ -108,25 +118,28 @@
             <h2>TEXTO</h2>
             <!-- Texto en imagen -->
             <form>
-                <label for="superior">SUPERIOR</label>
-                <textarea aria-label="Texto superior" name="texto-superior" id="superior" cols="20" rows="1">
-      TEXTO SUPERIOR
-          </textarea>
-                <input type="checkbox" name="quitar-texto-superior" id="checkbox-texto-superior" />
-                <label for="checkbox">Sin texto superior</label>
+                <label for="superior">SUPERIOR
+                     <textarea aria-label="Texto superior" name="texto-superior" id="superior" cols="20" rows="1">
+                         TEXTO SUPERIOR
+                     </textarea>
+                 </label>
+                <label for="checkbox">
+                     <input type="checkbox" name="quitar-texto-superior" id="checkbox-texto-superior" />
+                    Sin texto superior
+                </label>
 
-                <label for="inferior">INFERIOR</label>
-
-                <textarea aria-label="Texto inferior" name="texto-superior" id="inferior" cols="20" rows="1">
-      TEXTO INFERIOR
-
-
-          </textarea>
-                <input type="checkbox" name="quitar-texto-inferior" id="checkbox-texto-inferior" />
-                <label for="checkbox">Sin texto inferior</label>
+                <label for="inferior">INFERIOR
+                    <textarea aria-label="Texto inferior" name="texto-superior" id="inferior" cols="20" rows="1">
+                      TEXTO INFERIOR
+                     </textarea>
+                 </label>
+                <label for="checkbox">
+                     <input type="checkbox" name="quitar-texto-inferior" id="checkbox-texto-inferior" />
+                      Sin texto inferior
+                 </label>
                 <!-- Fuente -->
-                <label>FUENTE</label>
-                <select aria-label="Selector de fuentes para el texto" name="tipo-fuente" id="selectorFuente">
+                <label>FUENTE
+                     <select aria-label="Selector de fuentes para el texto" name="tipo-fuente" id="selectorFuente">
 						<option value="Arial">Arial</option>
 						<option value="Arial Black">Arial Black</option>
 						<option value="American Typewriter">American Typewriter</option>
@@ -137,45 +150,55 @@
 						<option value="Verdana">Verdana</option>
 						<option value="Times New Roman">Times New Roman</option>
 					</select>
-                <input aria-label="Tamaño de la fuente" type="number" id="tamanioFuente" name="100" value="35" />
-                <button aria-label="Alineacion de texto al centro" id="alinear-centro" value="center">
+                
+                    <input aria-label="Tamaño de la fuente" type="number" id="tamanioFuente" name="100" value="35" />
+                
+                    <button aria-label="Alineacion de texto al centro" id="alinear-centro" value="center">
 						<i aria-hidden="true" class="fas fa-align-center"></i>
 					</button>
-                <button aria-label="Alineacion de texto a la derecha" id="alinear-derecha" value="flex-end">
+                     <button aria-label="Alineacion de texto a la derecha" id="alinear-derecha" value="flex-end">
 						<i aria-hidden="true" class="fas fa-align-right"></i>
 					</button>
-                <button aria-label="Alineacion de texto a la izquierda" id="alinear-izquierda" value="flex-start">
+                     <button aria-label="Alineacion de texto a la izquierda" id="alinear-izquierda" value="flex-start">
 						<i aria-hidden="true" class="fas fa-align-left"></i>
 					</button>
 
+                </label>
+
                 <!-- Color de letra y fondo -->
-                <label for="color-letra">COLOR</label>
-                <input aria-label="Color de la letra" type="color" name="color-letra" id="color-letra" />
-                <label for="color-fondo">FONDO</label>
-                <input aria-label="Color de fondo del texto" type="color" name="color-fondo" id="color-fondo" />
-                <label for="fondo-transparente">Fondo transparente</label>
-                <input type="checkbox" name="fondo-transparente" id="fondo-transparente" />
+                <label for="color-letra">COLOR
+                 <input aria-label="Color de la letra" type="color" name="color-letra" id="color-letra" />
+                </label>
+                <label for="color-fondo">FONDO
+                 <input aria-label="Color de fondo del texto" type="color" name="color-fondo" id="color-fondo" />
+                </label>
+                <label for="fondo-transparente">
+                 <input type="checkbox" name="fondo-transparente" id="fondo-transparente" />
+                 Fondo transparente
+                </label>
 
                 <!-- Contorno -->
-                <label>CONTORNO</label>
-                <button id="contorno-ninguno">Ninguno</button>
-                <button id="contorno-claro">Claro</button>
-                <button id="contorno-oscuro">Oscuro</button>
-
+                <label>CONTORNO
+                    <button id="contorno-ninguno">Ninguno</button>
+                    <button id="contorno-claro">Claro</button>
+                    <button id="contorno-oscuro">Oscuro</button>
+                </label>
                 <!-- Espaciado -->
-                <label for="espaciado">ESPACIADO</label>
+                <label for="espaciado">ESPACIADO
                 <input aria-label="Espaciado" type="number" name="espaciado" id="espaciado" min="10" max="50" value="15" />
+                </label>
 
                 <!-- Interlineado -->
-                <label for="interlineado">INTERLINEADO</label>
-                <select aria-label="Interlineado" type="number" name="interlineado" id="interlineado">
-                  <option value="0.8">0.8</option>
-                  <option value="1">1</option>
-                  <option value="1.2">1.2</option>
-                  <option value="1.5">1.5</option>
-                  <option value="2">2</option>
-                  <option value="2.5">2.5</option>
-              </select>
+                <label for="interlineado">INTERLINEADO
+                    <select aria-label="Interlineado" type="number" name="interlineado" id="interlineado">
+                     <option value="0.8">0.8</option>
+                     <option value="1">1</option>
+                     <option value="1.2">1.2</option>
+                     <option value="1.5">1.5</option>
+                     <option value="2">2</option>
+                     <option value="2.5">2.5</option>
+                    </select>
+                </label>
             </form>
         </div>
     </aside>

@@ -102,7 +102,6 @@ const cambio = () => {
     const inputTexto = document.getElementById("inputTexto").value;
     const imagen = document.getElementById("imagen");
     imagen.style.backgroundImage = `url(${inputTexto})`;
-    return false
 };
 
 inputTexto.oninput = cambio;
@@ -118,7 +117,11 @@ const cambioFiltro = () => {
     const hue = filtroHue.value;
     const saturado = filtroSaturado.value;
     const negativo = filtroNegativo.value;
-    cajaImagenMeme.style.filter = `brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%) hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})`;
+    cajaImagenMeme.style.filter = `
+    brightness(${brillo}) opacity(${opacidad}) contrast(${contraste}%) 
+    blur(${desenfoque}px) grayscale(${escala}%) sepia(${sepia}%)
+     hue-rotate(${hue}deg) saturate(${saturado}%) invert(${negativo})
+     `;
 };
 filtroBrillo.onchange = cambioFiltro;
 filtroOpacidad.onchange = cambioFiltro;
@@ -146,7 +149,6 @@ reestablecerFiltros.onclick = () => {
     cajaImagenMeme.style.backgroundBlendMode = "unset";
 
     cambioFiltro();
-    return false;
 };
 
 //Funcion selector de color
@@ -189,9 +191,6 @@ colorFondo.oninput = () => {
 const transparente = () => {
     topTextP.classList.toggle("top-transparencia");
     bottomTextP.classList.toggle("bottom-transparencia");
-
-    console.log(topTextP);
-    console.log(bottomTextP);
 };
 checkboxTransparente.addEventListener("click", transparente);
 
